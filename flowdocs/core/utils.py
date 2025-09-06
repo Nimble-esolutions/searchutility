@@ -8,6 +8,8 @@ import pytesseract
 
 # ---------------- API Setup ----------------
 OPEN_API_KEY = os.getenv("OPENAI_API_KEY")
+client = None
+
 print(f"[🔑] OpenAI API Key loaded: {'Yes' if OPEN_API_KEY else 'No'}")
 if OPEN_API_KEY:
     print(f"[🔑] API Key starts with: {OPEN_API_KEY[:20]}...")
@@ -28,11 +30,10 @@ else:
     except:
         print("[❌] No fallback API key found")
     
-    # Final fallback: use the correct API key if nothing else works
+    # Final fallback: no hardcoded API key for security
     if not client:
-        print("[🔧] FINAL FALLBACK: Using correct API key")
-        OPEN_API_KEY = "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"
-        client = OpenAI(api_key=OPEN_API_KEY)
+        print("[🔧] FINAL FALLBACK: No API key available")
+        print("[❌] Please set OPENAI_API_KEY environment variable")
     
 
 
