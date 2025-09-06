@@ -33,7 +33,7 @@ else:
 
 # Collect static files
 echo "Collecting static files..."
-cd /app/flowdocs && DJANGO_SETTINGS_MODULE=flowdocs.settings python manage.py collectstatic --noinput || echo "Static files collection failed, continuing..."
+cd /app/flowdocs && DJANGO_SETTINGS_MODULE=flowdocs.settings python manage.py collectstatic --noinput --clear || echo "Static files collection failed, continuing..."
 
 # Start the application
 echo "Starting Gunicorn server on 0.0.0.0:8000..."
