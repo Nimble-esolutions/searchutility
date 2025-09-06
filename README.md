@@ -4,6 +4,9 @@
 [![Django](https://img.shields.io/badge/Django-5.2.6-green.svg)](https://www.djangoproject.com/)
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
 [![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg)](https://www.docker.com/)
+[![HTML5](https://img.shields.io/badge/HTML5-Ready-orange.svg)](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
+[![CSS3](https://img.shields.io/badge/CSS3-Modern-blue.svg)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![License](https://img.shields.io/badge/License-Government-red.svg)](LICENSE)
 
 > **Advanced AI-powered document search and management system for the Commissioner for Cooperation and Registrar, Cooperative Societies, Maharashtra State.**
@@ -22,6 +25,7 @@ This Django-based web application provides intelligent document search capabilit
 - **🌐 Multi-language**: Support for English and Marathi
 - **🔒 Secure**: CSRF protection, HTTPS support, and environment-based configuration
 - **📱 Responsive**: Mobile-friendly interface with modern UI
+- **🎨 Futuristic Landing Pages**: Beautiful animated static pages for coming soon and maintenance
 
 ## 🏗️ Architecture
 
@@ -43,11 +47,40 @@ searchutility/
 │   ├── media/                  # Uploaded files
 │   ├── locale/                 # Internationalization
 │   └── manage.py              # Django management
+├── landing-pages/              # Futuristic static landing pages
+│   ├── index.html             # Main landing page with navigation
+│   ├── coming-soon.html       # Futuristic "Coming Soon" page
+│   ├── maintenance.html       # Animated "Under Maintenance" page
+│   └── assets/                # CSS, JS, and images
 ├── Dockerfile                  # Container configuration
 ├── start.sh                   # Container startup script
 ├── requirements.txt           # Python dependencies
 ├── .env.template              # Environment variables template
 └── README.md                  # This file
+```
+
+## 🎨 Landing Pages
+
+### Futuristic Static Pages
+
+The `landing-pages/` directory contains beautifully designed, animated static pages perfect for:
+
+- **🚀 Coming Soon Page**: Pre-launch showcase with progress indicators
+- **🔧 Maintenance Page**: System maintenance with live countdown timer
+- **🏠 Index Page**: Navigation hub for administrators
+
+#### Design Features:
+- **Dark Theme**: Space-inspired color scheme with neon accents
+- **Animated Backgrounds**: Dynamic gradients and floating particles
+- **Glassmorphism**: Frosted glass effects with backdrop blur
+- **Interactive Elements**: Hover effects and 3D transformations
+- **Responsive Design**: Perfect on all devices
+
+#### Quick Deployment:
+```bash
+# Deploy landing pages to any static hosting
+cd landing-pages
+# Upload to your web server or CDN
 ```
 
 ## 🚀 Quick Start
@@ -251,35 +284,6 @@ Configure volume mounts for persistent data:
    - Login with superuser credentials
    - Upload initial PDF documents
    - Configure user roles and departments
-
-### Step 6: Traefik Configuration
-
-Your current Traefik configuration is correctly set up:
-
-```yaml
-http:
-  routers:
-    prod-frontend-aywco9-router-1:
-      rule: Host(`dev.ai-sahakar.net`)
-      service: prod-frontend-aywco9-service-1
-      middlewares:
-        - redirect-to-https
-      entryPoints:
-        - web
-    prod-frontend-aywco9-router-websecure-1:
-      rule: Host(`dev.ai-sahakar.net`)
-      service: prod-frontend-aywco9-service-1
-      entryPoints:
-        - websecure
-      tls:
-        certResolver: letsencrypt
-  services:
-    prod-frontend-aywco9-service-1:
-      loadBalancer:
-        servers:
-          - url: http://prod-frontend-aywco9:8000
-        passHostHeader: true
-```
 
 ## 🔧 Configuration
 
