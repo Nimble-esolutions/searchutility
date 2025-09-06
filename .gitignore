@@ -174,4 +174,4 @@ tmp/
 
 # Local development
 local/
-dev/
+dev/staticfiles/
