@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CC & RCS Maharashtra - AI Document Search System</title>
+    <meta name="description" content="Commissioner for Cooperation and Registrar, Cooperative Societies, Maharashtra State - AI-Powered Document Search System">
+    <meta name="keywords" content="Maharashtra, Cooperative Societies, CC RCS, Document Search, AI">
+    <meta name="author" content="CC & RCS Maharashtra">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/MahaIT_Logo.png">
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            padding: 3rem;
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+        
+        .logo {
+            width: 80px;
+            height: auto;
+            margin-bottom: 2rem;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        
+        p {
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            min-width: 150px;
+        }
+        
+        .btn-coming-soon {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+        }
+        
+        .btn-maintenance {
+            background: linear-gradient(135deg, #ff9800, #f57c00);
+            box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .note {
+            margin-top: 2rem;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 2rem;
+                margin: 1rem;
+            }
+            
+            .buttons {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="assets/images/MahaIT_Logo.png" alt="Maharashtra IT Logo" class="logo">
+        
+        <h1>CC & RCS Maharashtra</h1>
+        <p>
+            Welcome to the AI-Powered Document Search System for Commissioner for Cooperation and Registrar, 
+            Cooperative Societies, Maharashtra State.
+        </p>
+        
+        <div class="buttons">
+            <a href="coming-soon.html" class="btn btn-coming-soon">
+                🚀 Coming Soon Page
+            </a>
+            <a href="maintenance.html" class="btn btn-maintenance">
+                🔧 Maintenance Page
+            </a>
+        </div>
+        
+        <div class="note">
+            <strong>For Administrators:</strong><br>
+            Choose the appropriate page based on your current system status. 
+            The Coming Soon page is ideal for pre-launch scenarios, while the Maintenance page 
+            should be used during system updates or scheduled downtime.
+        </div>
+    </div>
+
+    <script>
+        // Auto-redirect logic (uncomment and modify as needed)
+        /*
+        // Example: Auto-redirect to coming-soon page
+        // window.location.href = 'coming-soon.html';
+        
+        // Example: Auto-redirect based on time
+        const currentHour = new Date().getHours();
+        if (currentHour >= 2 && currentHour <= 6) {
+            // Maintenance window: 2 AM to 6 AM
+            window.location.href = 'maintenance.html';
+        } else {
+            window.location.href = 'coming-soon.html';
+        }
+        */
+        
+        // Add click tracking (optional)
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                const page = this.getAttribute('href');
+                console.log('Navigating to:', page);
+                // You can add analytics tracking here
+            });
+        });
+    </script>
+</body>
+</html>
