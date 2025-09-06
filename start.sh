@@ -5,14 +5,20 @@ set -e
 
 echo "Starting FlowDocs application..."
 
-# Wait for database to be ready
-echo "Waiting for database..."
-python flowdocs/manage.py migrate --check || {
-    echo "Database not ready, running migrations..."
-    python flowdocs/manage.py migrate
+# Set default environment variables if not set
+export SECRET_KEY=${SECRET_KEY:-"django-insecure-change-me-in-production"}
+export DEBUG=${DEBUG:-"False"}
+export ALLOWED_HOSTS=${ALLOWED_HOSTS:-"*"}
+
+echo "Environment: SECRET_KEY=${SECRET_KEY:0:10}..., DEBUG=$DEBUG, ALLOWED_HOSTS=$ALLOWED_HOSTS"
+
+# Run migrations (ignore errors for now)
+echo "Running database migrations..."
+python flowdocs/manage.py migrate || {
+    echo "Migration failed, continuing with existing database..."
 }
 
-# Create superuser if it doesn't exist
+# Create superuser if it doesn't exist (ignore errors)
 echo "Checking for superuser..."
 python flowdocs/manage.py shell -c "
 from django.contrib.auth import get_user_model
@@ -22,12 +28,12 @@ if not User.objects.filter(username='admin').exists():
     print('Superuser created: admin/admin123')
 else:
     print('Superuser already exists')
-"
+" || echo "Superuser creation failed, continuing..."
 
 # Collect static files
 echo "Collecting static files..."
-python flowdocs/manage.py collectstatic --noinput
+python flowdocs/manage.py collectstatic --noinput || echo "Static files collection failed, continuing..."
 
 # Start the application
-echo "Starting Gunicorn server..."
+echo "Starting Gunicorn server on 0.0.0.0:8000..."
 exec gunicorn --bind 0.0.0.0:8000 --workers 3 --timeout 120 --access-logfile - --error-logfile - flowdocs.wsgi:application
