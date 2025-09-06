@@ -1,0 +1,16 @@
+{
+  "name": "maharashtra-coming-soon",
+  "version": "1.0.0",
+  "description": "CC & RCS Maharashtra Coming Soon Page",
+  "main": "index.html",
+  "scripts": {
+    "build": "node build-config.js",
+    "start": "node build-config.js && npx serve ."
+  },
+  "dependencies": {
+    "serve": "^14.2.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

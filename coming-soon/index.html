@@ -14,9 +14,6 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700;800;900&family=SF+Pro+Text:wght@300;400;500;600&display=swap" rel="stylesheet">
     
-    <!-- Configuration -->
-    <script src="config.js"></script>
-    
     <style>
         * {
             margin: 0;
@@ -205,7 +202,7 @@
             height: 100%;
             background: linear-gradient(90deg, #34c759, #30d158);
             border-radius: 10px;
-            width: 85%;
+            width: 25%;
             animation: progressFill 2s ease-out;
             position: relative;
             overflow: hidden;
@@ -225,7 +222,7 @@
 
         @keyframes progressFill {
             from { width: 0%; }
-            to { width: var(--progress-width, 85%); }
+            to { width: var(--progress-width, 25%); }
         }
 
         @keyframes shimmer {
@@ -318,7 +315,7 @@
                 <div class="progress-container">
                     <div class="progress-bar" id="progressBar"></div>
                 </div>
-                <div class="progress-text" id="progressText">85% Complete</div>
+                <div class="progress-text" id="progressText">25% Complete</div>
             </div>
         </div>
     </main>
@@ -332,23 +329,35 @@
 
     <!-- JavaScript for dynamic progress -->
     <script>
-        // Get progress from environment variable or default to 85
+        // Get progress from multiple sources with 25% as default fallback
         function getProgressPercentage() {
-            // Try to get from environment variable (Dokploy will inject this)
-            const envProgress = window.PROGRESS_PERCENTAGE || window.DEVELOPMENT_PROGRESS;
-            if (envProgress && !isNaN(envProgress)) {
-                return Math.min(100, Math.max(0, parseInt(envProgress)));
-            }
-            
-            // Try to get from URL parameter
+            // Try to get from URL parameter first (for testing)
             const urlParams = new URLSearchParams(window.location.search);
             const urlProgress = urlParams.get('progress');
             if (urlProgress && !isNaN(urlProgress)) {
-                return Math.min(100, Math.max(0, parseInt(urlProgress)));
+                const progress = Math.min(100, Math.max(0, parseInt(urlProgress)));
+                console.log('Using URL parameter progress:', progress);
+                return progress;
             }
             
-            // Default fallback
-            return 85;
+            // Try to get from localStorage (for persistent changes)
+            const storedProgress = localStorage.getItem('development_progress');
+            if (storedProgress && !isNaN(storedProgress)) {
+                const progress = Math.min(100, Math.max(0, parseInt(storedProgress)));
+                console.log('Using stored progress:', progress);
+                return progress;
+            }
+            
+            // Try to get from config.js if loaded
+            if (window.PROGRESS_PERCENTAGE && !isNaN(window.PROGRESS_PERCENTAGE)) {
+                const progress = Math.min(100, Math.max(0, parseInt(window.PROGRESS_PERCENTAGE)));
+                console.log('Using config.js progress:', progress);
+                return progress;
+            }
+            
+            // Default fallback to 25%
+            console.log('Using default progress: 25%');
+            return 25;
         }
 
         // Update progress display
@@ -369,12 +378,33 @@
             setTimeout(() => {
                 progressBar.style.animation = 'progressFill 2s ease-out';
             }, 100);
+            
+            console.log('Progress updated to:', progress + '%');
         }
+
+        // Function to update progress (can be called from browser console)
+        window.updateProgress = function(newProgress) {
+            if (newProgress && !isNaN(newProgress)) {
+                const progress = Math.min(100, Math.max(0, parseInt(newProgress)));
+                localStorage.setItem('development_progress', progress);
+                updateProgress();
+                console.log('Progress manually updated to:', progress + '%');
+            }
+        };
 
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', function() {
             updateProgress();
+            
+            // Add instructions to console
+            console.log('=== Progress Control Instructions ===');
+            console.log('To change progress: updateProgress(50)');
+            console.log('To test with URL: ?progress=75');
+            console.log('Current progress:', getProgressPercentage() + '%');
         });
     </script>
+    
+    <!-- Load config.js if available -->
+    <script src="config.js" onerror="console.log('config.js not found, using defaults')"></script>
 </body>
 </html>
