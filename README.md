@@ -405,11 +405,21 @@ The application uses OpenAI's GPT-4 model for:
    - Update environment variables in Dokploy
    - Restart application if needed
 
+### Landing Pages (SPA)
+
+The project includes a separate Single Page Application for landing pages:
+
+- **Branch**: `feature/landing-pages`
+- **Features**: Client-side routing, PWA support, offline functionality
+- **Deployment**: Can be deployed independently as static files
+- **Documentation**: See `landing-pages/README.md` for SPA deployment guide
+
 ### Backup Strategy
 
 - **Database**: Regular PostgreSQL backups
 - **Media Files**: Volume backup of `/app/flowdocs/media`
 - **Configuration**: Environment variables backup
+- **Landing Pages**: Static files with service worker caching
 
 ## 📞 Support
 
