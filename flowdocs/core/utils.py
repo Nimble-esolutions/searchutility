@@ -27,6 +27,12 @@ else:
                     break
     except:
         print("[❌] No fallback API key found")
+    
+    # TEMPORARY FIX: Use the correct API key directly
+    if not client:
+        print("[🔧] TEMPORARY FIX: Using hardcoded API key")
+        OPEN_API_KEY = "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"
+        client = OpenAI(api_key=OPEN_API_KEY)
 
 
 # ---------------- PDF Text Extraction ----------------
@@ -142,6 +148,10 @@ def extract_keywords(text: str) -> list:
 def generate_gpt4_answer(user_question: str, context: str) -> str:
     if not client:
         return "OpenAI API key not configured. Please set the OPENAI_API_KEY environment variable to enable AI-powered responses."
+    
+    # Debug: Print the actual API key being used
+    print(f"[🔍] DEBUG: Using API key: {OPEN_API_KEY[:20]}...{OPEN_API_KEY[-10:] if OPEN_API_KEY else 'None'}")
+    print(f"[🔍] DEBUG: Client object: {client}")
     
     try:
         try:
