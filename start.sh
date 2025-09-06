@@ -7,21 +7,21 @@ echo "Starting FlowDocs application..."
 
 # Set default environment variables if not set
 export SECRET_KEY=${SECRET_KEY:-"django-insecure-change-me-in-production"}
-export DEBUG=${DEBUG:-"False"}
+export DEBUG=${DEBUG:-"True"}
 export ALLOWED_HOSTS=${ALLOWED_HOSTS:-"*"}
-export DJANGO_SETTINGS_MODULE=${DJANGO_SETTINGS_MODULE:-"flowdocs.flowdocs.settings_production"}
+export DJANGO_SETTINGS_MODULE=${DJANGO_SETTINGS_MODULE:-"flowdocs.settings"}
 
 echo "Environment: SECRET_KEY=${SECRET_KEY:0:10}..., DEBUG=$DEBUG, ALLOWED_HOSTS=$ALLOWED_HOSTS, DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE"
 
 # Run migrations (ignore errors for now)
 echo "Running database migrations..."
-python flowdocs/manage.py migrate || {
+cd /app/flowdocs && DJANGO_SETTINGS_MODULE=flowdocs.settings python manage.py migrate || {
     echo "Migration failed, continuing with existing database..."
 }
 
 # Create superuser if it doesn't exist (ignore errors)
 echo "Checking for superuser..."
-python flowdocs/manage.py shell -c "
+cd /app/flowdocs && DJANGO_SETTINGS_MODULE=flowdocs.settings python manage.py shell -c "
 from django.contrib.auth import get_user_model
 User = get_user_model()
 if not User.objects.filter(username='admin').exists():
@@ -33,7 +33,7 @@ else:
 
 # Collect static files
 echo "Collecting static files..."
-python flowdocs/manage.py collectstatic --noinput || echo "Static files collection failed, continuing..."
+cd /app/flowdocs && DJANGO_SETTINGS_MODULE=flowdocs.settings python manage.py collectstatic --noinput || echo "Static files collection failed, continuing..."
 
 # Start the application
 echo "Starting Gunicorn server on 0.0.0.0:8000..."
