@@ -20,11 +20,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.shortcuts import redirect
 
-def admin_redirect(request):
-    return redirect('login')
-
 urlpatterns = [
-    path('admin/', admin_redirect),
+    path('admin/', admin.site.urls),
     path('', include('core.urls')),  # ✅ Include your app's URLs
 ]
 

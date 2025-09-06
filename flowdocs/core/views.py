@@ -223,10 +223,6 @@ MAX_SNIPPET_LENGTH = 1500  # max chars per PDF snippet
 
 
 def search_query(request):
-    # Redirect unauthenticated users to login page
-    if not request.user.is_authenticated:
-        return redirect('login')
-    
     if request.method == "GET":
         # Show welcome message with categories/subcategories for authenticated users
         categories = Folder.objects.filter(parent__isnull=True).order_by("name")
