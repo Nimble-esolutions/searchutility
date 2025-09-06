@@ -92,7 +92,17 @@ def extract_text_from_image(pdf_path):
         images = convert_from_path(pdf_path)
         for i, img in enumerate(images, start=1):
             print(f"[🖼] Running OCR on page {i}")
-            page_text = pytesseract.image_to_string(img, lang="mar+eng")  # OCR directly on PIL image
+            # Save image to temporary file for OCR
+            import tempfile
+            with tempfile.NamedTemporaryFile(suffix='.png', delete=False) as tmp_file:
+                img.save(tmp_file.name)
+                try:
+                    page_text = pytesseract.image_to_string(tmp_file.name, lang="mar+eng")
+                except Exception as ocr_error:
+                    print(f"[⚠️] OCR failed for page {i}: {ocr_error}")
+                    page_text = ""
+                finally:
+                    os.unlink(tmp_file.name)  # Clean up temp file
             print(f"[🖼 OCR] Extracted {len(page_text)} chars from page {i}")
             text += page_text + "\n"
     except Exception as e:
