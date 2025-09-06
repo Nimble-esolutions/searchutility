@@ -1,0 +1,250 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-03 13:26+0530\n"
+"PO-Revision-Date: 2025-09-03 12:10+0530\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Marathi\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: .\core\templates\home.html:6
+msgid "Home - CC & RCS Maharashtra"
+msgstr "मुखपृष्ठ - सहकार आयुक्त आणि निबंधक सहकारी संस्था महाराष्ट्र"
+
+#: .\core\templates\home.html:8 .\core\templates\search.html:8
+msgid ""
+"Commissioner for Cooperation and Registrar, Cooperative Societies,"Maharashtra State, Pune "
+
+msgstr "सहकार आयुक्त व निबंधक, सहकारी संस्था, महाराष्ट्र राज्य, पुणे"
+
+#: .\core\templates\home.html:18
+msgid "येथे शोधा"
+msgstr ""
+
+#: .\core\templates\home.html:23 .\core\templates\search.html:27
+msgid "Admin Login"
+msgstr "ऍडमिन लॉगिन"
+
+#: .\core\templates\home.html:24 .\core\templates\search.html:28
+msgid "Home"
+msgstr "मुखपृष्ठ"
+
+#: .\core\templates\home.html:76 .\core\templates\search.html:28
+msgid "Dashboard"
+msgstr "डॅशबोर्ड"
+
+
+
+
+#: .\core\templates\home.html:25 .\core\templates\search.html:29
+msgid "Contact Us"
+msgstr "संपर्क करा"
+
+#: .\core\templates\home.html:26
+msgid "Skip to Navigation"
+msgstr "नेव्हिगेशनकडे जा"
+
+#: .\core\templates\home.html:27
+msgid "Skip to Main Content"
+msgstr "मुख्य सामग्रीकडे जा"
+
+#: .\core\templates\home.html:28
+msgid "A--"
+msgstr "अ--"
+
+#: .\core\templates\home.html:29
+msgid "A-"
+msgstr "अ-"
+
+#: .\core\templates\home.html:30
+msgid "A"
+msgstr "अ"
+
+#: .\core\templates\home.html:31
+msgid "A+"
+msgstr "अ+"
+
+#: .\core\templates\home.html:32
+msgid "A++"
+msgstr "अ++"
+
+#: .\core\templates\home.html:37
+msgid "मराठी"
+msgstr "मराठी"
+
+#: .\core\templates\home.html:48 .\core\templates\search.html:54
+msgid "Left Logo"
+msgstr "डावीकडील लोगो"
+
+#: .\core\templates\home.html:51 .\core\templates\search.html:57
+msgid "Commissioner for Cooperation and Registrar,"
+msgstr "सहकार आयुक्त व निबंधक,"
+
+#: .\core\templates\home.html:52 .\core\templates\search.html:58
+msgid "Cooperative Societies (CC and RCS), Maharashtra State, Pune"
+msgstr "सहकारी संस्था (सीसी आणि आरसीएस), महाराष्ट्र राज्य, पुणे"
+
+#: .\core\templates\home.html:55 .\core\templates\search.html:61
+msgid "Right Logo"
+msgstr "उजवीकडील लोगो"
+
+#: .\core\templates\home.html:64 .\core\templates\home.html:73
+msgid "Search With AI"
+msgstr "एआयसह शोधा"
+
+#: .\core\templates\home.html:67
+msgid "About CC and RCS"
+msgstr "सीसी आणि आरसीएस बद्दल"
+
+#: .\core\templates\home.html:68
+msgid "Downloads"
+msgstr "डाउनलोड्स"
+
+#: .\core\templates\home.html:69
+msgid "RTS Act"
+msgstr "आरटीएस कायदा"
+
+#: .\core\templates\home.html:70
+msgid "FAQs"
+msgstr "वारंवार विचारले जाणारे प्रश्न"
+
+#: .\core\templates\home.html:71
+msgid "Tender Notices"
+msgstr "टेंडर सूचना"
+
+#: .\core\templates\home.html:86
+msgid "Update"
+msgstr "अपडेट"
+
+#: .\core\templates\home.html:89
+msgid "National Cooperation Policy 2025"
+msgstr "राष्ट्रीय सहकार धोरण २०२५"
+
+#: .\core\templates\home.html:90
+msgid "E-Tender Notice"
+msgstr "ई-टेंडर सूचना"
+
+#: .\core\templates\home.html:91
+msgid "Urban Cooperative Scheme"
+msgstr "शहरी सहकारी योजना"
+
+#: .\core\templates\home.html:92
+msgid "Digital Registration Scheme"
+msgstr "डिजिटल नोंदणी योजना"
+
+#: .\core\templates\home.html:93
+msgid "State Cooperative Awards"
+msgstr "राज्य सहकारी पुरस्कार"
+
+#: .\core\templates\home.html:96
+msgid "More News"
+msgstr "अधिक बातम्या"
+
+#: .\core\templates\home.html:98
+msgid "Quick Links"
+msgstr "त्वरित दुवे"
+
+#: .\core\templates\home.html:100
+msgid "Deemed Conveyance - Pratyay MahaBhumi"
+msgstr "डिम्ड कंव्हेअन्स - प्रत्यय महाभूमी"
+
+#: .\core\templates\home.html:101
+msgid "Amended Acts & Rules"
+msgstr "सुधारित कायदे व नियम"
+
+#: .\core\templates\home.html:102
+msgid "District Wise Societies"
+msgstr "जिल्हानिहाय संस्था"
+
+#: .\core\templates\home.html:103
+msgid "Complaint Status"
+msgstr "तक्रारीची स्थिती"
+
+#: .\core\templates\home.html:104
+msgid "Digital Registration Dashboard"
+msgstr "डिजिटल नोंदणी डॅशबोर्ड"
+
+#: .\core\templates\home.html:105
+msgid "Online Services Portal"
+msgstr "ऑनलाईन सेवा पोर्टल"
+
+#: .\core\templates\home.html:106
+msgid "Audit Reports & Insights"
+msgstr "लेखापरीक्षण अहवाल व माहिती"
+
+#: .\core\templates\home.html:115
+msgid "Slide 1"
+msgstr "स्लाईड १"
+
+#: .\core\templates\home.html:118
+msgid "Slide 2"
+msgstr "स्लाईड २"
+
+#: .\core\templates\home.html:132
+msgid "Key Person"
+msgstr "महत्त्वाची व्यक्ती"
+
+#: .\core\templates\home.html:135
+msgid "Shri. Devendra Fadnavis"
+msgstr "श्री. देवेंद्र फडणवीस"
+
+#: .\core\templates\home.html:139
+msgid "Shri. Eknath Shinde"
+msgstr "श्री. एकनाथ शिंदे"
+
+#: .\core\templates\home.html:143
+msgid "Shri. Ajit Pawar"
+msgstr "श्री. अजित पवार"
+
+#: .\core\templates\home.html:151
+msgid "Important Links"
+msgstr "महत्त्वाचे दुवे"
+
+#: .\core\templates\home.html:158
+msgid "Related Links"
+msgstr "संबंधित दुवे"
+
+#: .\core\templates\home.html:168
+msgid "Government of Maharashtra"
+msgstr "महाराष्ट्र शासन"
+
+#: .\core\templates\search.html:6
+msgid "Search With AI - CC & RCS Maharashtra"
+msgstr "एआयसह शोधा - सीसी आणि आरसीएस महाराष्ट्र"
+
+#: .\core\templates\search.html:20
+msgid "Search Here"
+msgstr "येथे शोधा"
+
+#: .\core\templates\search.html:81
+msgid "Ask anything..."
+msgstr "💬 काहीही विचारा..."
+
+#: .\core\templates\search.html:82
+msgid "Send"
+msgstr "पाठवा"
+
+#: .\core\templates\search.html:95
+msgid "© 2025 Sahakarayukta Website. All rights reserved."
+msgstr "© २०२५ सहकारयुक्त संकेतस्थळ. सर्व हक्क राखीव."
+
+#: .\flowdocs\settings.py:150
+msgid "English"
+msgstr "इंग्रजी"
+
+#: .\flowdocs\settings.py:151
+msgid "Marathi"
+msgstr "मराठी"
+
+#~ msgid "Search here"
+#~ msgstr "येथे शोधा"
+
+#~ msgid "⚠️ Something went wrong. Please try again later."
+#~ msgstr "⚠️ काहीतरी चूक झाली. कृपया नंतर पुन्हा प्रयत्न करा."
+
+
