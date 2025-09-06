@@ -36,7 +36,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-!y2+0!gjaq*)3f16^1xd5ufs85
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'True').lower() == 'true'
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1,dev.ai-sahakar.net,www.ai-sahakar.net,ai-sahakar.net,testserver').split(',')
 if '*' in ALLOWED_HOSTS:
     ALLOWED_HOSTS = ['*']
 
