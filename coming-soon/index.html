@@ -64,12 +64,32 @@
             flex-shrink: 0;
         }
 
+        .logo-container {
+            margin-bottom: 1rem;
+        }
+
         .logo {
             width: 60px;
             height: 60px;
-            margin-bottom: 1rem;
             filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
             object-fit: contain;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .logo-fallback {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #007aff, #5856d6);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
 
         .header-title {
@@ -264,7 +284,10 @@
 
     <!-- Header -->
     <header class="header">
-        <img src="../assets/images/MahaIT_Logo.png" alt="Maharashtra IT Logo" class="logo">
+        <div class="logo-container">
+            <img src="../assets/images/MahaIT_Logo.png" alt="Maharashtra IT Logo" class="logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="logo-fallback" style="display: none;">MH</div>
+        </div>
         <h1 class="header-title">Commissioner for Cooperation and Registrar</h1>
         <p class="header-subtitle">Cooperative Societies (CC and RCS), Maharashtra State, Pune</p>
     </header>
