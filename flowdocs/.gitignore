@@ -1,0 +1,7 @@
+# Ignore secrets
+*.env
+flowdocs/flowdocs/settings.py
+
+# Python cache
+__pycache__/
+*.pyc
