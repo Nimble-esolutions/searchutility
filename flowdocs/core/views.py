@@ -260,8 +260,8 @@ def search_query(request):
             print(f"🌐 Detected query language: {lang}")
             language_instruction = "Answer in Marathi." if lang == "mr" else "Answer in English."
 
-            # Search PDFs
-            pdfs = PDFFile.objects.filter(folder__parent__isnull=False).order_by("-uploaded_at")
+            # Search PDFs - include both main folders and subfolders
+            pdfs = PDFFile.objects.filter(folder__isnull=False).order_by("-uploaded_at")
             print(f"📂 Total PDFs to scan: {pdfs.count()}")
 
             matched_pdfs, relevant_context = [], ""
@@ -270,10 +270,19 @@ def search_query(request):
                 try:
                     print(f"➡️ Checking PDF: {pdf.title}")
 
-                    pdf_text = extract_text_from_pdf(pdf.file.path) or ""
+                    # Use stored text content if available, otherwise extract from file
+                    pdf_text = pdf.text_content or ""
                     if not pdf_text.strip():
-                        print(f"🖼️ No text found in {pdf.title}, trying OCR...")
-                        pdf_text = extract_text_from_image(pdf.file.path) or ""
+                        print(f"📄 No stored text, extracting from file: {pdf.title}")
+                        pdf_text = extract_text_from_pdf(pdf.file.path) or ""
+                        if not pdf_text.strip():
+                            print(f"🖼️ No text found in {pdf.title}, trying OCR...")
+                            pdf_text = extract_text_from_image(pdf.file.path) or ""
+                        
+                        # Save extracted text for future use
+                        if pdf_text.strip():
+                            pdf.text_content = pdf_text
+                            pdf.save()
 
                     if not pdf_text:
                         print(f"⚠️ Still no text from {pdf.title}")
