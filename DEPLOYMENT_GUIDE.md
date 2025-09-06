@@ -1,23 +1,25 @@
 # Deployment Guide - CC & RCS Maharashtra Landing Pages
-## Apple-Style Design with Independent Pages
+## Apple-Style Design with Independent Deployments
 
 ### 🎯 **Overview**
 
-This repository contains three independent landing pages with Apple-style design:
-- `index.html` - Auto-redirect page (default)
-- `coming-soon.html` - Futuristic coming soon page
-- `maintenance.html` - Animated maintenance page
+This repository contains two independent Apple-style landing pages:
+- **`coming-soon/`** - Futuristic coming soon page
+- **`maintenance/`** - Animated maintenance page
+
+Each page is in its own directory with an `index.html` file for easy Dokploy deployment.
 
 ### 🚀 **Dokploy Static Deployment**
 
-#### **Method 1: Deploy All Pages (Recommended)**
+#### **Method 1: Deploy Coming Soon Page**
 
 1. **Create Application in Dokploy:**
    ```
-   Application Name: maharashtra-landing-pages
+   Application Name: maharashtra-coming-soon
    Build Type: Static
    Repository: Nimble-esolutions/searchutility
    Branch: landing-pages-only
+   Root Directory: coming-soon/
    ```
 
 2. **Domain Configuration:**
@@ -29,47 +31,46 @@ This repository contains three independent landing pages with Apple-style design
    HTTPS: Enable with Let's Encrypt
    ```
 
-3. **Deploy** - All pages will be available:
-   - `https://ai-sahakar.net/` - Auto-redirect page
-   - `https://ai-sahakar.net/coming-soon.html` - Coming soon page
-   - `https://ai-sahakar.net/maintenance.html` - Maintenance page
+3. **Deploy** - Coming soon page will be available at:
+   - `https://ai-sahakar.net/` - Apple-style coming soon page
 
-#### **Method 2: Deploy Single Page as Index**
+#### **Method 2: Deploy Maintenance Page**
 
-To set a specific page as the main page, rename it to `index.html`:
+1. **Create Application in Dokploy:**
+   ```
+   Application Name: maharashtra-maintenance
+   Build Type: Static
+   Repository: Nimble-esolutions/searchutility
+   Branch: landing-pages-only
+   Root Directory: maintenance/
+   ```
 
-**For Coming Soon Page:**
-```bash
-# Rename coming-soon.html to index.html
-mv coming-soon.html index.html
-# Remove old index.html
-rm index.html.backup
-```
+2. **Domain Configuration:**
+   ```
+   Host: maintenance.ai-sahakar.net
+   Path: /
+   Internal Path: /
+   Container Port: 80
+   HTTPS: Enable with Let's Encrypt
+   ```
 
-**For Maintenance Page:**
-```bash
-# Rename maintenance.html to index.html
-mv maintenance.html index.html
-# Remove old index.html
-rm index.html.backup
-```
+3. **Deploy** - Maintenance page will be available at:
+   - `https://maintenance.ai-sahakar.net/` - Apple-style maintenance page
 
 ### 🎨 **Design Features**
 
 #### **Apple-Style UI/UX:**
 - **SF Pro Display/Text Fonts**: Apple's official typeface
-- **Dark Theme**: Pure black background with subtle gradients
-- **Glassmorphism**: Frosted glass effects with backdrop blur
+- **Pure Black Background**: (#000000) with subtle animated gradients
+- **Glassmorphism Effects**: Frosted glass with backdrop blur
 - **Minimalist Design**: Clean, spacious layouts
 - **Smooth Animations**: Subtle transitions and hover effects
-- **Responsive Design**: Perfect on all devices
+- **Highly Responsive**: No scrollbars, perfect fit on all devices
 
-#### **Color Scheme:**
-- **Primary**: Pure black (#000000)
+#### **Color Schemes:**
+- **Coming Soon**: Green (#34c759) and blue (#007aff) accents
+- **Maintenance**: Orange (#ff9500) and red (#ff6b35) accents
 - **Text**: White (#f5f5f7) and light gray (#a1a1a6)
-- **Accents**: 
-  - Coming Soon: Green (#34c759) and blue (#007aff)
-  - Maintenance: Orange (#ff9500) and red (#ff6b35)
 - **Backgrounds**: Subtle gradients with transparency
 
 ### 📱 **Responsive Design**
@@ -77,39 +78,21 @@ rm index.html.backup
 - **Desktop**: Optimized for 1920x1080 and larger
 - **Tablet**: Perfect on iPad and Android tablets
 - **Mobile**: iPhone and Android phone optimized
+- **No Scrollbars**: Content fits perfectly within viewport
 - **Breakpoints**: 768px and 480px
 
 ### 🔧 **Customization**
 
 #### **Change Page Content:**
-1. Edit the HTML files directly
+1. Edit the HTML files in respective directories
 2. Update text, colors, and images
 3. Commit and push changes
 4. Dokploy will auto-deploy
 
-#### **Modify Auto-Redirect Logic:**
-Edit `index.html` JavaScript:
-```javascript
-function redirectToPage() {
-    const currentHour = new Date().getHours();
-    
-    // Customize maintenance window
-    if (currentHour >= 2 && currentHour <= 6) {
-        window.location.href = 'maintenance.html';
-    } else {
-        window.location.href = 'coming-soon.html';
-    }
-}
-```
-
-#### **Update Contact Information:**
-Edit contact sections in both pages:
-```html
-<div class="contact-item">
-    <div class="contact-icon">✉️</div>
-    <span>your-email@domain.com</span>
-</div>
-```
+#### **Modify Styling:**
+- Edit CSS within the HTML files
+- Update colors, fonts, layouts
+- Test on different devices
 
 ### 📊 **Performance**
 
@@ -119,6 +102,7 @@ Edit contact sections in both pages:
   - HTML: ~5KB (gzipped)
   - CSS: ~8KB (gzipped)
   - Images: ~100KB total
+- **No External Dependencies**: Self-contained
 
 ### 🎯 **Usage Scenarios**
 
@@ -134,15 +118,10 @@ Edit contact sections in both pages:
 - Database migrations
 - Security patches
 
-#### **Auto-Redirect Page:**
-- Smart routing based on time
-- Fallback for all scenarios
-- Manual page selection
-
 ### 🔄 **Updates and Maintenance**
 
 1. **Content Updates:**
-   - Edit HTML files
+   - Edit HTML files in respective directories
    - Commit changes
    - Push to repository
    - Dokploy auto-deploys
