@@ -32,6 +32,6 @@ elif os.getenv('DEBUG', 'True').lower() == 'false':
         os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'flowdocs.settings')
 else:
     # Development environment - use regular settings
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'flowdocs.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'flowdocs.flowdocs.settings')
 
 application = get_wsgi_application()

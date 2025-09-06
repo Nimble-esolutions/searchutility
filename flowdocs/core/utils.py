@@ -28,11 +28,6 @@ else:
     except:
         print("[❌] No fallback API key found")
     
-    # TEMPORARY FIX: Use the correct API key directly
-    if not client:
-        print("[🔧] TEMPORARY FIX: Using hardcoded API key")
-        OPEN_API_KEY = "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"
-        client = OpenAI(api_key=OPEN_API_KEY)
 
 
 # ---------------- PDF Text Extraction ----------------
