@@ -9,8 +9,9 @@ echo "Starting FlowDocs application..."
 export SECRET_KEY=${SECRET_KEY:-"django-insecure-change-me-in-production"}
 export DEBUG=${DEBUG:-"False"}
 export ALLOWED_HOSTS=${ALLOWED_HOSTS:-"*"}
+export DJANGO_SETTINGS_MODULE=${DJANGO_SETTINGS_MODULE:-"flowdocs.flowdocs.settings_production"}
 
-echo "Environment: SECRET_KEY=${SECRET_KEY:0:10}..., DEBUG=$DEBUG, ALLOWED_HOSTS=$ALLOWED_HOSTS"
+echo "Environment: SECRET_KEY=${SECRET_KEY:0:10}..., DEBUG=$DEBUG, ALLOWED_HOSTS=$ALLOWED_HOSTS, DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE"
 
 # Run migrations (ignore errors for now)
 echo "Running database migrations..."
