@@ -47,11 +47,15 @@ searchutility/
 │   ├── media/                  # Uploaded files
 │   ├── locale/                 # Internationalization
 │   └── manage.py              # Django management
-├── landing-pages/              # Futuristic static landing pages
-│   ├── index.html             # Main landing page with navigation
-│   ├── coming-soon.html       # Futuristic "Coming Soon" page
-│   ├── maintenance.html       # Animated "Under Maintenance" page
-│   └── assets/                # CSS, JS, and images
+├── assets/                     # Futuristic landing pages assets
+│   ├── css/
+│   │   └── style.css          # Futuristic CSS with animations
+│   ├── js/
+│   │   └── main.js            # Interactive JavaScript
+│   └── images/                # Maharashtra government assets
+├── index.html                  # Main landing page with navigation
+├── coming-soon.html           # Futuristic "Coming Soon" page
+├── maintenance.html           # Animated "Under Maintenance" page
 ├── Dockerfile                  # Container configuration
 ├── start.sh                   # Container startup script
 ├── requirements.txt           # Python dependencies
@@ -63,7 +67,7 @@ searchutility/
 
 ### Futuristic Static Pages
 
-The `landing-pages/` directory contains beautifully designed, animated static pages perfect for:
+The root directory contains beautifully designed, animated static pages perfect for:
 
 - **🚀 Coming Soon Page**: Pre-launch showcase with progress indicators
 - **🔧 Maintenance Page**: System maintenance with live countdown timer
@@ -75,13 +79,6 @@ The `landing-pages/` directory contains beautifully designed, animated static pa
 - **Glassmorphism**: Frosted glass effects with backdrop blur
 - **Interactive Elements**: Hover effects and 3D transformations
 - **Responsive Design**: Perfect on all devices
-
-#### Quick Deployment:
-```bash
-# Deploy landing pages to any static hosting
-cd landing-pages
-# Upload to your web server or CDN
-```
 
 ## 🚀 Quick Start
 
@@ -128,86 +125,52 @@ cd landing-pages
 
 Visit `http://localhost:8000` to access the application.
 
-## 🐳 Docker Deployment
-
-### Build and Run Locally
-
-```bash
-# Build the image
-docker build -t cc-rcs-search .
-
-# Run with environment file
-docker run -d \
-  --name cc-rcs-search \
-  --env-file .env \
-  -p 8000:8000 \
-  -v $(pwd)/media:/app/flowdocs/media \
-  cc-rcs-search
-```
-
-### Docker Compose (Development)
-
-```yaml
-version: '3.8'
-services:
-  web:
-    build: .
-    ports:
-      - "8000:8000"
-    env_file:
-      - .env
-    volumes:
-      - ./media:/app/flowdocs/media
-    depends_on:
-      - db
-      - redis
-
-  db:
-    image: postgres:15
-    environment:
-      POSTGRES_DB: flowdocs
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: your-password
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-
-  redis:
-    image: redis:7-alpine
-    ports:
-      - "6379:6379"
-
-volumes:
-  postgres_data:
-```
-
 ## 🚀 Dokploy Deployment Guide
 
-### Step 1: Repository Setup
+### Option 1: Static Build Type (Recommended for Landing Pages)
 
-1. **Fork/Clone Repository**
-   - Ensure your repository is accessible to Dokploy
-   - Repository: `https://github.com/Nimble-esolutions/searchutility.git`
-   - Branch: `development` (for production deployment)
+**Perfect for the futuristic landing pages!**
 
-### Step 2: Dokploy Configuration
-
-#### General Settings
-- **Project Name**: `Search Utility`
-- **Application Name**: `prod-frontend-aywco9`
-- **Build Type**: `Dockerfile` ✅
+#### Step 1: Dokploy Configuration
+- **Application Name**: `maharashtra-landing-pages`
+- **Build Type**: `Static` ✅
 - **Repository**: `Nimble-esolutions/searchutility`
 - **Branch**: `development`
 
-#### Environment Variables
-Configure the following in Dokploy's Environment tab:
+#### Step 2: Domain Configuration
+- **Host**: `dev.ai-sahakar.net` (or your domain)
+- **Path**: `/`
+- **Internal Path**: `/`
+- **Container Port**: `80`
+- **HTTPS**: Enable with Let's Encrypt
 
+#### Step 3: Deploy
+Dokploy will automatically:
+1. Copy all files from root directory to `/usr/share/nginx/html`
+2. Use optimized Nginx Dockerfile
+3. Serve the futuristic landing pages
+
+**Result**: Your beautiful animated landing pages will be live! 🎉
+
+### Option 2: Dockerfile Build Type (For Full Django App)
+
+**For the complete AI-powered search system:**
+
+#### Step 1: Dokploy Configuration
+- **Application Name**: `cc-rcs-search-system`
+- **Build Type**: `Dockerfile` ✅
+- **Repository**: `Nimble-esolutions/searchutility`
+- **Branch**: `development`
+- **Dockerfile Path**: `./Dockerfile`
+
+#### Step 2: Environment Variables
 ```bash
 # Django Settings
-SECRET_KEY=your-super-secret-key-here-change-this-in-production
+SECRET_KEY=your-super-secret-key-here
 DEBUG=False
-ALLOWED_HOSTS=localhost,127.0.0.1,dev.ai-sahakar.net,www.ai-sahakar.net,ai-sahakar.net
+ALLOWED_HOSTS=dev.ai-sahakar.net,www.ai-sahakar.net
 
-# Database Configuration (PostgreSQL recommended for production)
+# Database Configuration
 DB_NAME=flowdocs
 DB_USER=postgres
 DB_PASSWORD=your-secure-db-password
@@ -217,73 +180,36 @@ DB_PORT=5432
 # OpenAI API Configuration
 OPENAI_API_KEY=sk-proj-your-openai-api-key-here
 
-# Google API (if needed)
-GOOGLE_API_KEY=your-google-api-key-here
-
-# Redis Configuration
-REDIS_URL=redis://localhost:6379/1
-
 # CORS and CSRF Configuration
-CORS_ALLOWED_ORIGINS=https://dev.ai-sahakar.net,https://www.ai-sahakar.net,https://ai-sahakar.net
-CSRF_TRUSTED_ORIGINS=https://dev.ai-sahakar.net,https://www.ai-sahakar.net,https://ai-sahakar.net,http://localhost:8000
-
-# Sentry (Optional - for error tracking)
-SENTRY_DSN=your-sentry-dsn-here
+CORS_ALLOWED_ORIGINS=https://dev.ai-sahakar.net,https://www.ai-sahakar.net
+CSRF_TRUSTED_ORIGINS=https://dev.ai-sahakar.net,https://www.ai-sahakar.net
 ```
 
-#### Domain Configuration
+#### Step 3: Domain Configuration
 - **Host**: `dev.ai-sahakar.net`
-- **Path**: `/`
-- **Internal Path**: `/`
 - **Container Port**: `8000`
-- **HTTPS**: Enabled with Let's Encrypt
-- **Certificate Provider**: Let's Encrypt
+- **HTTPS**: Enable with Let's Encrypt
 
-#### Build Configuration
-- **Docker File**: `./Dockerfile`
-- **Docker Context Path**: `.`
-- **Docker Build Stage**: `production` (optional)
+## 🎨 Landing Pages Features
 
-### Step 3: Database Setup
+### Visual Effects:
+- **Animated Backgrounds**: Multi-layer gradient animations
+- **Particle Systems**: Floating geometric particles
+- **Glow Effects**: Neon-style lighting on key elements
+- **Shimmer Animations**: Subtle light sweeps across surfaces
+- **3D Transforms**: Hover effects with depth and perspective
 
-#### Option A: Dokploy PostgreSQL Service
-1. Create a PostgreSQL service in Dokploy
-2. Configure connection details in environment variables
-3. Database will be automatically created
+### Interactive Elements:
+- **Hover Animations**: Smooth transitions on user interaction
+- **Click Effects**: Tactile feedback on button presses
+- **Progress Animations**: Animated progress bars and counters
+- **Real-time Updates**: Live countdown and status updates
 
-#### Option B: External Database
-1. Set up PostgreSQL instance
-2. Create database: `flowdocs`
-3. Update environment variables with connection details
-
-### Step 4: Volume Mounts (Important)
-
-Configure volume mounts for persistent data:
-
-```yaml
-# In Dokploy Volume Backups section
-/app/flowdocs/media:/data/media    # For uploaded PDF files
-/app/staticfiles:/data/static      # For static files (optional)
-```
-
-### Step 5: Deployment Process
-
-1. **Initial Deployment**
-   ```bash
-   # Dokploy will automatically:
-   # 1. Clone the repository
-   # 2. Build Docker image using Dockerfile
-   # 3. Run database migrations
-   # 4. Create superuser (if configured)
-   # 5. Collect static files
-   # 6. Start Gunicorn server
-   ```
-
-2. **Post-Deployment Setup**
-   - Access the application at `https://dev.ai-sahakar.net`
-   - Login with superuser credentials
-   - Upload initial PDF documents
-   - Configure user roles and departments
+### Responsive Design:
+- **Mobile-First**: Optimized for all screen sizes
+- **Flexible Grids**: Adaptive layouts for different devices
+- **Touch-Friendly**: Large touch targets for mobile users
+- **Performance**: Optimized animations for smooth performance
 
 ## 🔧 Configuration
 
@@ -304,13 +230,6 @@ Configure volume mounts for persistent data:
 | `SENTRY_DSN` | Sentry error tracking | - | ❌ |
 | `CORS_ALLOWED_ORIGINS` | CORS allowed origins | - | ✅ |
 | `CSRF_TRUSTED_ORIGINS` | CSRF trusted origins | - | ✅ |
-
-### Settings Files
-
-- **`flowdocs/flowdocs/settings.py`**: Development settings
-- **`flowdocs/flowdocs/settings_production.py`**: Production settings with PostgreSQL, Redis, and security configurations
-
-The application automatically selects the appropriate settings based on the `DEBUG` environment variable.
 
 ## 📊 Database Models
 
@@ -432,4 +351,4 @@ The application uses OpenAI's GPT-4 model for:
 
 ---
 
-**Note**: This application is specifically designed for the Maharashtra government's cooperative societies department. Ensure all API keys and sensitive information are properly configured before deployment.
+**Note**: This application is specifically designed for the Maharashtra government's cooperative societies department. The futuristic landing pages are now in the root directory and ready for Dokploy Static deployment!
