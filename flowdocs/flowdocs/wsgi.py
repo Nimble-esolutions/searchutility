@@ -18,6 +18,9 @@ if os.getenv('DJANGO_SETTINGS_MODULE'):
 elif os.path.exists('/app/flowdocs/flowdocs/settings_production.py'):
     # Production environment - use production settings
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'flowdocs.flowdocs.settings_production')
+elif os.path.exists('flowdocs/settings_production.py'):
+    # Local development with production settings
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'flowdocs.settings_production')
 else:
     # Development environment - use regular settings
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'flowdocs.settings')
