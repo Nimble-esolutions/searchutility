@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-4">
+
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold text-primary">📂 Categories</h2>
+        {% if role == 'admin' or role == 'superadmin' %}
+        <button class="btn btn-success shadow-sm" data-bs-toggle="modal" data-bs-target="#createFolderModal">
+            <i class="bi bi-plus-circle me-1"></i> Create New Category
+        </button>
+        {% endif %}
+    </div>
+
+    <!-- Category Cards -->
+    <div class="row g-4">
+        {% for folder in folders %}
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="card shadow-sm border-0 h-100 category-card position-relative">
+                <div class="card-body d-flex flex-column justify-content-center align-items-center text-center">
+                    
+                    <!-- Category Name -->
+                    <h5 class="card-title fw-bold">
+                        <a href="{% url 'dashboard' folder_id=folder.id %}" class="text-decoration-none text-primary">
+                            {{ folder.name }}
+                        </a>
+                    </h5>
+                    
+                    <!-- Subcategory Count -->
+                    <p class="text-muted small mb-0">
+                        {{ folder.subfolders.count }} Subcategories
+                    </p>
+                </div>
+
+                <!-- Delete Button (Top Right) -->
+                {% if role == 'admin' or role == 'superadmin' %}
+                <a href="{% url 'delete_folder' folder.id %}" 
+                   class="btn btn-sm btn-delete rounded-circle shadow-sm position-absolute top-0 end-0 m-2"
+                   onclick="return confirm('Are you sure you want to delete this category?');">
+                    <i class="bi bi-trash3"></i>
+                </a>
+                {% endif %}
+
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12">
+            <div class="alert alert-info text-center">No categories available.</div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Create Category and Subcategory Modal -->
+<div class="modal fade" id="createFolderModal" tabindex="-1" aria-labelledby="createFolderModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="post" action="{% url 'create_folder' %}">
+                {% csrf_token %}
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="createFolderModalLabel">Create Category & Subcategory</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Category Name -->
+                    <div class="mb-3">
+                        <label for="id_category_name" class="form-label">Category Name</label>
+                        <input type="text" name="category_name" id="id_category_name" class="form-control" required>
+                    </div>
+
+                    <!-- Subcategory Name -->
+                    <div class="mb-3">
+                        <label for="id_subcategory_name" class="form-label">Subcategory Name</label>
+                        <input type="text" name="subcategory_name" id="id_subcategory_name" class="form-control" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">Create</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Custom Styles -->
+<style>
+/* Category Card */
+.category-card {
+    border-radius: 16px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    background: #ffffff;
+}
+.category-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+.category-card .card-title a {
+    color: #0d6efd;
+    font-size: 1.1rem;
+}
+.category-card .card-title a:hover {
+    text-decoration: underline;
+}
+
+/* Delete Button - Corporate Style */
+.btn-delete {
+    background-color: #f8d7da;   /* soft light red */
+    color: #721c24;              /* dark red icon */
+    border: none;
+    transition: all 0.3s ease;
+}
+.btn-delete:hover {
+    background-color: #dc3545;   /* strong red */
+    color: #fff;                 /* white icon */
+    transform: scale(1.1);
+}
+</style>
+{% endblock %}
