@@ -25,18 +25,18 @@ load_dotenv(os.path.join(BASE_DIR, '.env'))
 
 
 #---------------------For OpenApi-----------------------------------------------------
-OPENAI_API_KEY=os.getenv('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')
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-!y2+0!gjaq*)3f16^1xd5ufs85!^-^t%4)7p&!ng7z7m2x-m&t'
+SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-!y2+0!gjaq*)3f16^1xd5ufs85!^-^t%4)7p&!ng7z7m2x-m&t')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv('DEBUG', 'True').lower() == 'true'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
 
 
 # Application definition
@@ -128,7 +128,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
@@ -139,7 +140,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 AUTH_USER_MODEL = 'core.CustomUser'
-# OPENAI_API_KEY = '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'
+# OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
 
 from django.utils.translation import gettext_lazy as _

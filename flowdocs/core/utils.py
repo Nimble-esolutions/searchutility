@@ -8,7 +8,9 @@ import pytesseract
 
 # ---------------- API Setup ----------------
 OPEN_API_KEY = os.getenv("OPENAI_API_KEY")
-client = OpenAI(api_key=OPEN_API_KEY)
+client = None
+if OPEN_API_KEY:
+    client = OpenAI(api_key=OPEN_API_KEY)
 
 
 # ---------------- PDF Text Extraction ----------------
@@ -122,6 +124,9 @@ def extract_keywords(text: str) -> list:
 
 # ---------------- GPT-4 Answer Generation ----------------
 def generate_gpt4_answer(user_question: str, context: str) -> str:
+    if not client:
+        return "OpenAI API key not configured. Please set the OPENAI_API_KEY environment variable to enable AI-powered responses."
+    
     try:
         try:
             lang = detect(user_question)
