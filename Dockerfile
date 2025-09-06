@@ -44,6 +44,9 @@ RUN pip install --no-cache-dir --upgrade pip \
 # Copy project
 COPY . .
 
+# Copy .env file if it exists
+COPY .env* ./
+
 # Create directories for static and media files
 RUN mkdir -p /app/staticfiles /app/media
 

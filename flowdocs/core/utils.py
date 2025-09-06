@@ -8,9 +8,25 @@ import pytesseract
 
 # ---------------- API Setup ----------------
 OPEN_API_KEY = os.getenv("OPENAI_API_KEY")
-client = None
+print(f"[🔑] OpenAI API Key loaded: {'Yes' if OPEN_API_KEY else 'No'}")
 if OPEN_API_KEY:
+    print(f"[🔑] API Key starts with: {OPEN_API_KEY[:20]}...")
     client = OpenAI(api_key=OPEN_API_KEY)
+else:
+    print("[❌] OpenAI API key not found in environment variables")
+    print(f"[🔑] Available env vars: {[k for k in os.environ.keys() if 'OPENAI' in k.upper()]}")
+    print(f"[🔑] All environment variables: {list(os.environ.keys())}")
+    # Fallback: try to read from a file if env var is not set
+    try:
+        with open('/app/.env', 'r') as f:
+            for line in f:
+                if line.startswith('OPENAI_API_KEY='):
+                    OPEN_API_KEY = line.split('=', 1)[1].strip()
+                    print(f"[🔑] Fallback: Found API key in file: {OPEN_API_KEY[:20]}...")
+                    client = OpenAI(api_key=OPEN_API_KEY)
+                    break
+    except:
+        print("[❌] No fallback API key found")
 
 
 # ---------------- PDF Text Extraction ----------------
