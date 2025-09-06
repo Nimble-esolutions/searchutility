@@ -14,6 +14,9 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700;800;900&family=SF+Pro+Text:wght@300;400;500;600&display=swap" rel="stylesheet">
     
+    <!-- Configuration -->
+    <script src="config.js"></script>
+    
     <style>
         * {
             margin: 0;
@@ -206,6 +209,7 @@
             animation: progressFill 2s ease-out;
             position: relative;
             overflow: hidden;
+            transition: width 0.5s ease;
         }
 
         .progress-bar::after {
@@ -221,7 +225,7 @@
 
         @keyframes progressFill {
             from { width: 0%; }
-            to { width: 85%; }
+            to { width: var(--progress-width, 85%); }
         }
 
         @keyframes shimmer {
@@ -312,9 +316,9 @@
             <div class="progress-section">
                 <div class="progress-label">Development Progress</div>
                 <div class="progress-container">
-                    <div class="progress-bar"></div>
+                    <div class="progress-bar" id="progressBar"></div>
                 </div>
-                <div class="progress-text">85% Complete</div>
+                <div class="progress-text" id="progressText">85% Complete</div>
             </div>
         </div>
     </main>
@@ -325,5 +329,52 @@
             © 2025 Commissioner for Cooperation and Registrar, Cooperative Societies, Maharashtra State. All rights reserved.
         </p>
     </footer>
+
+    <!-- JavaScript for dynamic progress -->
+    <script>
+        // Get progress from environment variable or default to 85
+        function getProgressPercentage() {
+            // Try to get from environment variable (Dokploy will inject this)
+            const envProgress = window.PROGRESS_PERCENTAGE || window.DEVELOPMENT_PROGRESS;
+            if (envProgress && !isNaN(envProgress)) {
+                return Math.min(100, Math.max(0, parseInt(envProgress)));
+            }
+            
+            // Try to get from URL parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlProgress = urlParams.get('progress');
+            if (urlProgress && !isNaN(urlProgress)) {
+                return Math.min(100, Math.max(0, parseInt(urlProgress)));
+            }
+            
+            // Default fallback
+            return 85;
+        }
+
+        // Update progress display
+        function updateProgress() {
+            const progress = getProgressPercentage();
+            const progressBar = document.getElementById('progressBar');
+            const progressText = document.getElementById('progressText');
+            
+            // Update progress bar width
+            progressBar.style.setProperty('--progress-width', progress + '%');
+            progressBar.style.width = progress + '%';
+            
+            // Update progress text
+            progressText.textContent = progress + '% Complete';
+            
+            // Add animation class for smooth transition
+            progressBar.style.animation = 'none';
+            setTimeout(() => {
+                progressBar.style.animation = 'progressFill 2s ease-out';
+            }, 100);
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateProgress();
+        });
+    </script>
 </body>
 </html>
