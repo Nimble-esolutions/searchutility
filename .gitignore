@@ -1,0 +1,12 @@
+﻿# Ignore Python environment
+venv/
+__pycache__/
+*.pyc
+
+# Django files
+*.sqlite3
+*.env
+flowdocs/settings.py  # optional, if you want settings.py secret-free
+
+# Media
+media/
