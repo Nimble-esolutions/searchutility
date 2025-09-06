@@ -10,8 +10,14 @@ export SECRET_KEY=${SECRET_KEY:-"django-insecure-change-me-in-production"}
 export DEBUG=${DEBUG:-"True"}
 export ALLOWED_HOSTS=${ALLOWED_HOSTS:-"*"}
 export DJANGO_SETTINGS_MODULE=${DJANGO_SETTINGS_MODULE:-"flowdocs.settings"}
+export OPENAI_API_KEY=${OPENAI_API_KEY:-""}
+export CORS_ALLOWED_ORIGINS=${CORS_ALLOWED_ORIGINS:-""}
+export CSRF_TRUSTED_ORIGINS=${CSRF_TRUSTED_ORIGINS:-""}
 
 echo "Environment: SECRET_KEY=${SECRET_KEY:0:10}..., DEBUG=$DEBUG, ALLOWED_HOSTS=$ALLOWED_HOSTS, DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE"
+echo "OpenAI API Key: ${OPENAI_API_KEY:0:20}..." 
+echo "CORS Origins: $CORS_ALLOWED_ORIGINS"
+echo "CSRF Origins: $CSRF_TRUSTED_ORIGINS"
 
 # Run migrations (ignore errors for now)
 echo "Running database migrations..."
