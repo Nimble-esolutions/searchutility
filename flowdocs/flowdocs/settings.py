@@ -13,6 +13,14 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 
+# Initialize OpenTelemetry before other imports
+try:
+    from .opentelemetry_config import otel_config
+    otel_config.initialize()
+except Exception as e:
+    print(f"⚠️ OpenTelemetry initialization failed: {e}")
+    # Continue without OpenTelemetry if initialization fails
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.

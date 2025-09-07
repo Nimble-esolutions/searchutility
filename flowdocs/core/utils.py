@@ -5,6 +5,13 @@ from openai import OpenAI
 from langdetect import detect, LangDetectException
 from PIL import Image
 import pytesseract
+import time
+
+# OpenTelemetry imports
+from .observability import (
+    trace_pdf_processing, trace_ocr_operation, trace_ai_operation,
+    trace_openai_call, search_metrics
+)
 
 # ---------------- API Setup ----------------
 OPEN_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -38,6 +45,7 @@ else:
 
 
 # ---------------- PDF Text Extraction ----------------
+@trace_pdf_processing("extract_text_from_pdf")
 def extract_text_from_pdf(file_path: str) -> str:
     """
     Extracts text from a PDF file safely.
@@ -84,6 +92,7 @@ def extract_text_from_pdf(file_path: str) -> str:
 import pytesseract
 from pdf2image import convert_from_path
 
+@trace_ocr_operation("extract_text_from_image")
 def extract_text_from_image(pdf_path):
     print(f"[🖼] Converting PDF to images for OCR: {pdf_path}")
     text = ""
@@ -118,6 +127,7 @@ import re
 import yake
 from langdetect import detect, LangDetectException
 
+@trace_ai_operation("extract_keywords")
 def extract_keywords(text: str) -> list:
     """
     Extracts ALL possible keywords (not limited to top N).
@@ -157,6 +167,7 @@ def extract_keywords(text: str) -> list:
 
 
 # ---------------- GPT-4 Answer Generation ----------------
+@trace_openai_call
 def generate_gpt4_answer(user_question: str, context: str) -> str:
     if not client:
         return "OpenAI API key not configured. Please set the OPENAI_API_KEY environment variable to enable AI-powered responses."
