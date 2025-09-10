@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+# Python cache
+__pycache__/
+*.pyc
+
+# Secrets
+*.env
+flowdocs/flowdocs/settings.py
+=======
 ﻿# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -175,3 +184,4 @@ tmp/
 # Local development
 local/
 dev/staticfiles/
+>>>>>>> e72d0398de10fdc822853defe165fa8b525fc1fc
