@@ -8,6 +8,7 @@ https://docs.djangoproject.com/en/5.2/howto/deployment/wsgi/
 """
 
 import os
+<<<<<<< HEAD
 import sys
 from pathlib import Path
 
@@ -33,5 +34,11 @@ elif os.getenv('DEBUG', 'True').lower() == 'false':
 else:
     # Development environment - use regular settings
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'flowdocs.flowdocs.settings')
+=======
+
+from django.core.wsgi import get_wsgi_application
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'flowdocs.settings')
+>>>>>>> e72d0398de10fdc822853defe165fa8b525fc1fc
 
 application = get_wsgi_application()

@@ -6,7 +6,13 @@ import sys
 
 def main():
     """Run administrative tasks."""
+<<<<<<< HEAD
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'flowdocs.settings')
+=======
+    # Add the flowdocs directory to Python path
+    sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'flowdocs'))
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'settings')
+>>>>>>> e72d0398de10fdc822853defe165fa8b525fc1fc
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
