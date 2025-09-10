@@ -32,6 +32,8 @@ RUN apt-get update \
         libffi-dev \
         pkg-config \
         curl \
+        default-libmysqlclient-dev \
+        build-essential \ 
     && rm -rf /var/lib/apt/lists/*
 
 # Copy requirements first for better caching
