@@ -32,14 +32,17 @@ RUN apt-get update \
         libffi-dev \
         pkg-config \
         curl \
+        default-libmysqlclient-dev \
+        build-essential \ 
     && rm -rf /var/lib/apt/lists/*
 
 # Copy requirements first for better caching
 COPY requirements.txt .
 
 # Install Python dependencies
-RUN pip install --no-cache-dir --upgrade pip \
-    && pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir --upgrade pip --root-user-action=ignore \
+    && pip install --no-cache-dir -r requirements.txt --root-user-action=ignore
+
 
 # Copy project
 COPY . .
