@@ -18,7 +18,10 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+<<<<<<< HEAD
+=======
 from django.shortcuts import redirect
+>>>>>>> e72d0398de10fdc822853defe165fa8b525fc1fc
 
 urlpatterns = [
     path('admin/', admin.site.urls),
