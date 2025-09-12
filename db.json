@@ -1,0 +1,1160 @@
+[🔑] OpenAI API Key loaded: Yes
+[
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "core",
+    "model": "customuser"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "core",
+    "model": "pdffile"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "core",
+    "model": "folder"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "42zckexkvcpf4tu4g5l2ijz0qo5w4eg0",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hBgCohL9z0DGZhBqoYmpV0Z765NutDtf-_9l4i4rTVunZc4kbgIEKffLWF-cNsB3bHdZpnnti5TkrsiD9rlOBM_r4f7d1Cx12_tLGnnkdPAKiTjgVVxBIwGoGjrPYRkM4SiA-agS9FmyA41kVFnYhTvD-SlOC4:1urtC7:fxgQReX5wgqhwb7wWOg4mFVwADmX1JvUEGV_NUpFFJ4",
+    "expire_date": "2025-09-12T07:06:43.189Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "5h58n8yvw6jswo72nleowzj2jtcv4oq5",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlnJev2jpOcM1tpr4wBypDipEHeHSCmgfTPzXiLQttaw9byEicVZoDj9bpHSI7cd8J3abZZpbusyRbkr8qBdXmfOz8vh_h1U6vVba6OYTAQCJJVLdqo40Kg9AiJao0eLDrBAUaxNdjgmbxwPAyrrkVm8P8AXNps:1uurEj:O8fsigYZtR1keRIkyEevvhgggRJ5Tf-afQbsPhPYXoo",
+    "expire_date": "2025-09-20T11:37:41.421Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "6gw1r0u9psnesqjyy9g0m3jxqh8nbhm2",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hBgCohL9z0DGZhBqoYmpV0Z765NutDtf-_9l4i4rTVunZc4kbgIEKffLWF-cNsB3bHdZpnnti5TkrsiD9rlOBM_r4f7d1Cx12_tLGnnkdPAKiTjgVVxBIwGoGjrPYRkM4SiA-agS9FmyA41kVFnYhTvD-SlOC4:1uu5Rd:XmBz8uhe5j2-q_j60gQo--nglhWLmZuyYapoPZdBn1I",
+    "expire_date": "2025-09-18T08:35:49.246Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "7376hk0u7pi2lb7e7sjb954jxo9f4e5w",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCgMFSX7j0DmWGmUjU0Ke3KeHfbpAvdvvf-f6uE61LS2mROI6uLCur0ywjzU-ou-IH1Puk81WUeSe-JPmzTt4nldT3av4OCrWxr01vjIMQMIBZoAAtsXXZMLorImWIQdH5DMXRM_RBMRCLfIQTvslGfL8_dN5E:1uurBe:UsBy5EK4A3E_Xj8L2LIh7UPVGAdyg06Qr5wvxLuHfiU",
+    "expire_date": "2025-09-20T11:34:30.042Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "8o33gg7so1ew944zyud1oak1tm38xr4n",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hBgCohL9z0DGZhBqoYmpV0Z765NutDtf-_9l4i4rTVunZc4kbgIEKffLWF-cNsB3bHdZpnnti5TkrsiD9rlOBM_r4f7d1Cx12_tLGnnkdPAKiTjgVVxBIwGoGjrPYRkM4SiA-agS9FmyA41kVFnYhTvD-SlOC4:1uoELI:s59uK-PqzThCh-ri2FcsuLVNafV0SDta3cwSGZJCuLw",
+    "expire_date": "2025-09-02T04:53:04.924Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "a54egjepdphw8p9mngxe1wvbhn7u3vu8",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hBgCohL9z0DGZhBqoYmpV0Z765NutDtf-_9l4i4rTVunZc4kbgIEKffLWF-cNsB3bHdZpnnti5TkrsiD9rlOBM_r4f7d1Cx12_tLGnnkdPAKiTjgVVxBIwGoGjrPYRkM4SiA-agS9FmyA41kVFnYhTvD-SlOC4:1urUPd:QL9JFFs4yOjy2yAocanK46wcfECBEZzmRCzoDsosJ8w",
+    "expire_date": "2025-09-11T04:39:01.323Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "b9gwk1zzv1io04p8y17h4echbkvygje1",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQAP_C2RAWKAWP3vsGAuwiVQNJaU_GvxuSHvQ6M5k38-HYiz86bX5FdmWSXX5ZDOlJdQh8hHpvPLW6b2vkI-Gn7XxpSK_b2f4NSuhlbDNqRQQTJDDBiqAwCxASjXYOIaqU5gwgZjRxshJJkUxkhAbhZAbLPl_gojeH:1uKFjo:OAQ5hoctMB__i--wzOY5X1R-lc2h7h57PoOQmNKLzbE",
+    "expire_date": "2025-06-11T12:18:28.022Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "bst656fp90qvdsyx3wgtzr8yaedl0vfu",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hBgCohL9z0DGZhBqoYmpV0Z765NutDtf-_9l4i4rTVunZc4kbgIEKffLWF-cNsB3bHdZpnnti5TkrsiD9rlOBM_r4f7d1Cx12_tLGnnkdPAKiTjgVVxBIwGoGjrPYRkM4SiA-agS9FmyA41kVFnYhTvD-SlOC4:1uu35Y:Qv56ABBqweCR-zjrncOUhxkKih2JCBgX2wvELu70VVc",
+    "expire_date": "2025-09-18T06:04:52.680Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ekf5pdh4rbfhmcbfqabhclozdh4not8x",
+  "fields": {
+    "session_data": ".eJxdjMsOgyAUBf-FdUPkjV12328gFy6oLdFEYNE0_fdq4qJ2e2bOvImDVkfXSlzdhORKJLn8bh7CM847wAfMw0LDMtd18nRX6EELvS8Y8-1wT4ERyri9FQJD1SE3khuLiYFHz6KxIATXTGKPnEkrlPKdZcrrxJM2SWihe-5Rb9EMpboScww1ogtQ47CsL3KdW87_tDR_Fj5fa01PiA:1uvt0h:xgoU1lvlChKSifxMdffdqU5zHU2vgd2DeDEtcl5WU38",
+    "expire_date": "2025-09-23T07:43:27.072Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "h7uk833ds9pntrehwwa96e6qfl95xach",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlnx-htKes5g7WZtHEC2FCcV4u4QKQW0b2beS0Tc1hK3npY4szgLI06_G-H0SHUHfMd6a3JqdV1mkrsiD9rltXF6Xg7376BgL9_aMiq2A4M34ANnhcSkkg-oNThleGRQJmhraQjKksuQnc_aaTcCsRPvD9mbN0I:1uvTiW:dtT0BFVGmSsUr8vRsIDJGlK9QWQ4yH5Pg0Rc-Fgz8qU",
+    "expire_date": "2025-09-22T04:43:00.492Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "jdd427lxbkvb89hy06b3v06lx51p95q9",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hBgCohL9z0DGZhBqoYmpV0Z765NutDtf-_9l4i4rTVunZc4kbgIEKffLWF-cNsB3bHdZpnnti5TkrsiD9rlOBM_r4f7d1Cx12_tLGnnkdPAKiTjgVVxBIwGoGjrPYRkM4SiA-agS9FmyA41kVFnYhTvD-SlOC4:1uqp4i:CPWpiaW3eKxLiZsWh8ismFe3Yaw8ppYese_e54_P_Uk",
+    "expire_date": "2025-09-09T08:30:40.008Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "jpxqzuhtp6fzsz95wqrc7o24y46idzo8",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCgMFSX7j0DmWGmUjU0Ke3KeHfbpAvdvvf-f6uE61LS2mROI6uLCur0ywjzU-ou-IH1Puk81WUeSe-JPmzTt4nldT3av4OCrWxr01vjIMQMIBZoAAtsXXZMLorImWIQdH5DMXRM_RBMRCLfIQTvslGfL8_dN5E:1uurBV:_scVShnjXGThPjPzRC_hmhM5rA_MjH7Ztk7KgUJF0ro",
+    "expire_date": "2025-09-20T11:34:21.840Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "kkvsrf80mtlv26vjv3in14xlmq2r5j2y",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQAP_C2RAWKAWP3vsGAuwiVQNJaU_GvxuSHvQ6M5k38-HYiz86bX5FdmWSXX5ZDOlJdQh8hHpvPLW6b2vkI-Gn7XxpSK_b2f4NSuhlbDNqRQQTJDDBiqAwCxASjXYOIaqU5gwgZjRxshJJkUxkhAbhZAbLPl_gojeH:1uJqiX:Cbpj69jeLiRBPvybw7I83UgnXWneTj_ySBebqL_n9fc",
+    "expire_date": "2025-06-10T09:35:29.307Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "lonlcghbr62n2ja4yxvcpvi8i6so9h0c",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hBgCohL9z0DGZhBqoYmpV0Z765NutDtf-_9l4i4rTVunZc4kbgIEKffLWF-cNsB3bHdZpnnti5TkrsiD9rlOBM_r4f7d1Cx12_tLGnnkdPAKiTjgVVxBIwGoGjrPYRkM4SiA-agS9FmyA41kVFnYhTvD-SlOC4:1uqp4k:xJiJ4-NpCwGZcj5asIJxWkxEaSUEQ-Cff8ebmzgWz7o",
+    "expire_date": "2025-09-09T08:30:42.612Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "nszzppovzbeeftk0uzx6cp2xmhe1jmg3",
+  "fields": {
+    "session_data": ".eJxdjMsOgyAUBf-FdUPkjS677zeQCxfUlmgisGia_ntr4ka3Z2bOh2Qo1ZWYY6gRXYAax3V7k2FpOd8utDR_FRy0OrlW4uZmJAOR5LR5CK-47ACfsIwrDetSt9nTXaEHLfSxYsz3wz0dTFCmf60QGKoOuZHcWEwMPHoWjQUhuGYSe-RMWqGU7yxTXieetElCC91zj5p8fyMrT4g:1uvYIQ:BuZ0L1nYSYc6wSvWhgr8wDBOZMQv_vqUtBLnN6emBhk",
+    "expire_date": "2025-09-22T09:36:22.195Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "o3wj0cjdfnmrjx4l4io2cz988fo1msy2",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQAP_C2RAWKAWP3vsGAuwiVQNJaU_GvxuSHvQ6M5k38-HYiz86bX5FdmWSXX5ZDOlJdQh8hHpvPLW6b2vkI-Gn7XxpSK_b2f4NSuhlbDNqRQQTJDDBiqAwCxASjXYOIaqU5gwgZjRxshJJkUxkhAbhZAbLPl_gojeH:1uK8TT:ltytAWqXyP053fbX91By1nJ-DMVnVKfALe0X2ZFeRvM",
+    "expire_date": "2025-06-11T04:33:07.362Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "rjrs0hplu3grozlqycbme7q1yp0g1rfo",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQAP_C2RAWKAWP3vsGAuwiVQNJaU_GvxuSHvQ6M5k38-HYiz86bX5FdmWSXX5ZDOlJdQh8hHpvPLW6b2vkI-Gn7XxpSK_b2f4NSuhlbDNqRQQTJDDBiqAwCxASjXYOIaqU5gwgZjRxshJJkUxkhAbhZAbLPl_gojeH:1uJsrK:Yz22t4VXLSWdn2bGUYvGfq7L7CThBDPB6BT6RoMnqrQ",
+    "expire_date": "2025-06-10T11:52:42.100Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "tcw4nnmwcfegaibtz4tbp0chtwb1ct4m",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hBgCohL9z0DGZhBqoYmpV0Z765NutDtf-_9l4i4rTVunZc4kbgIEKffLWF-cNsB3bHdZpnnti5TkrsiD9rlOBM_r4f7d1Cx12_tLGnnkdPAKiTjgVVxBIwGoGjrPYRkM4SiA-agS9FmyA41kVFnYhTvD-SlOC4:1unvGA:fuU9tL06lX1ghdz4RpzuiFKePp3ko2i33QHxfXCM66U",
+    "expire_date": "2025-09-01T08:30:30.666Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "trcdjoisofuvcgbwzaxc4vjhcxjm5vms",
+  "fields": {
+    "session_data": ".eJxdjMsOgyAUBf-FdUPkjS677zeQCxfUlmgisGia_ntr4ka3Z2bOh2Qo1ZWYY6gRXYAax3V7k2FpOd8utDR_FRy0OrlW4uZmJAOR5LR5CK-47ACfsIwrDetSt9nTXaEHLfSxYsz3wz0dTFCmf60QGKoOuZHcWEwMPHoWjQUhuGYSe-RMWqGU7yxTXieetElCC91zj5p8fyMrT4g:1uvauS:V4qSo7qH7D-U4jlAb1efp3jKmxpfmMq-6eBE_3wMF14",
+    "expire_date": "2025-09-22T12:23:48.684Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "tuvdbbebwbsmzidabjeuvpaghn0esoh8",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCgMFSX7j0DmWGmUjU0Ke3KeHfbpAvdvvf-f6uE61LS2mROI6uLCur0ywjzU-ou-IH1Puk81WUeSe-JPmzTt4nldT3av4OCrWxr01vjIMQMIBZoAAtsXXZMLorImWIQdH5DMXRM_RBMRCLfIQTvslGfL8_dN5E:1uurBL:RljiTLgd6iOpV4ut1OiBQN1Kgj7A3Qza4SqjEtV5hi4",
+    "expire_date": "2025-09-20T11:34:11.481Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "y9ssc4aa6qqgdkog1ru84w3ywrvqpvec",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQAP_C2RAWKAWP3vsGAuwiVQNJaU_GvxuSHvQ6M5k38-HYiz86bX5FdmWSXX5ZDOlJdQh8hHpvPLW6b2vkI-Gn7XxpSK_b2f4NSuhlbDNqRQQTJDDBiqAwCxASjXYOIaqU5gwgZjRxshJJkUxkhAbhZAbLPl_gojeH:1uKBcW:A0_Dd1XdMZG4er2Ycgv2wHbApPQp8EsU1XaZxJQdB1M",
+    "expire_date": "2025-06-11T07:54:40.372Z"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add user",
+    "content_type": [
+      "core",
+      "customuser"
+    ],
+    "codename": "add_customuser"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change user",
+    "content_type": [
+      "core",
+      "customuser"
+    ],
+    "codename": "change_customuser"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete user",
+    "content_type": [
+      "core",
+      "customuser"
+    ],
+    "codename": "delete_customuser"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view user",
+    "content_type": [
+      "core",
+      "customuser"
+    ],
+    "codename": "view_customuser"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add pdf file",
+    "content_type": [
+      "core",
+      "pdffile"
+    ],
+    "codename": "add_pdffile"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change pdf file",
+    "content_type": [
+      "core",
+      "pdffile"
+    ],
+    "codename": "change_pdffile"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete pdf file",
+    "content_type": [
+      "core",
+      "pdffile"
+    ],
+    "codename": "delete_pdffile"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view pdf file",
+    "content_type": [
+      "core",
+      "pdffile"
+    ],
+    "codename": "view_pdffile"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add folder",
+    "content_type": [
+      "core",
+      "folder"
+    ],
+    "codename": "add_folder"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change folder",
+    "content_type": [
+      "core",
+      "folder"
+    ],
+    "codename": "change_folder"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete folder",
+    "content_type": [
+      "core",
+      "folder"
+    ],
+    "codename": "delete_folder"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view folder",
+    "content_type": [
+      "core",
+      "folder"
+    ],
+    "codename": "view_folder"
+  }
+},
+{
+  "model": "core.customuser",
+  "fields": {
+    "password": "pbkdf2_sha256$600000$BBLGtHYNgjGii9n8GIC3MU$nVxMkK/ACRJ+Fha+ZW8bLSB7dg5NP/S6UHybdpQUdnQ=",
+    "last_login": "2025-09-09T04:55:53.015Z",
+    "is_superuser": false,
+    "username": "SnehalAbhivant",
+    "first_name": "",
+    "last_name": "",
+    "email": "abhivantsnehal@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-09-05T12:42:06.040Z",
+    "role": "superadmin",
+    "department": "finance",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "core.customuser",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$MqF1wSc25EdszpwoqdQJol$SjO6IWscMuxqDNSY6BmgBWu1B+Q4NIUXEMSaT7c0D5c=",
+    "last_login": "2025-09-06T11:34:30.040Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@example.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-09-06T11:31:30.805Z",
+    "role": "",
+    "department": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "core.folder",
+  "pk": 28,
+  "fields": {
+    "name": "Housing",
+    "created_by": [
+      "SnehalAbhivant"
+    ],
+    "created_at": "2025-09-08T10:01:00.263Z",
+    "parent": null
+  }
+},
+{
+  "model": "core.folder",
+  "pk": 29,
+  "fields": {
+    "name": "Redevlopment",
+    "created_by": [
+      "SnehalAbhivant"
+    ],
+    "created_at": "2025-09-08T10:01:00.482Z",
+    "parent": 28
+  }
+},
+{
+  "model": "core.folder",
+  "pk": 30,
+  "fields": {
+    "name": "Administrator Panel",
+    "created_by": [
+      "SnehalAbhivant"
+    ],
+    "created_at": "2025-09-08T10:12:56.359Z",
+    "parent": 28
+  }
+},
+{
+  "model": "core.folder",
+  "pk": 33,
+  "fields": {
+    "name": "Audit",
+    "created_by": [
+      "SnehalAbhivant"
+    ],
+    "created_at": "2025-09-08T10:20:58.030Z",
+    "parent": null
+  }
+},
+{
+  "model": "core.folder",
+  "pk": 34,
+  "fields": {
+    "name": "Auditor Empanelment",
+    "created_by": [
+      "SnehalAbhivant"
+    ],
+    "created_at": "2025-09-08T10:20:58.335Z",
+    "parent": 33
+  }
+},
+{
+  "model": "core.folder",
+  "pk": 35,
+  "fields": {
+    "name": "Online Audit",
+    "created_by": [
+      "SnehalAbhivant"
+    ],
+    "created_at": "2025-09-08T10:25:03.411Z",
+    "parent": 33
+  }
+},
+{
+  "model": "core.folder",
+  "pk": 36,
+  "fields": {
+    "name": "Agri Credit",
+    "created_by": [
+      "SnehalAbhivant"
+    ],
+    "created_at": "2025-09-08T10:30:56.774Z",
+    "parent": null
+  }
+},
+{
+  "model": "core.folder",
+  "pk": 37,
+  "fields": {
+    "name": "Scheme",
+    "created_by": [
+      "SnehalAbhivant"
+    ],
+    "created_at": "2025-09-08T10:30:56.949Z",
+    "parent": 36
+  }
+},
+{
+  "model": "core.folder",
+  "pk": 38,
+  "fields": {
+    "name": "Agri By-Laws",
+    "created_by": [
+      "SnehalAbhivant"
+    ],
+    "created_at": "2025-09-08T10:37:42.922Z",
+    "parent": 36
+  }
+},
+{
+  "model": "core.pdffile",
+  "pk": 104,
+  "fields": {
+    "title": "pdf1",
+    "file": "pdfs/202504281710047135.pdf",
+    "uploaded_by": [
+      "SnehalAbhivant"
+    ],
+    "uploaded_at": "2025-09-08T10:02:57.031Z",
+    "folder": 29,
+    "keywords": [],
+    "text_content": ""
+  }
+},
+{
+  "model": "core.pdffile",
+  "pk": 105,
+  "fields": {
+    "title": "pdf2",
+    "file": "pdfs/202504281883297780.pdf",
+    "uploaded_by": [
+      "SnehalAbhivant"
+    ],
+    "uploaded_at": "2025-09-08T10:03:20.465Z",
+    "folder": 29,
+    "keywords": [],
+    "text_content": ""
+  }
+},
+{
+  "model": "core.pdffile",
+  "pk": 106,
+  "fields": {
+    "title": "pdf3",
+    "file": "pdfs/20250428147252288.pdf",
+    "uploaded_by": [
+      "SnehalAbhivant"
+    ],
+    "uploaded_at": "2025-09-08T10:05:30.157Z",
+    "folder": 29,
+    "keywords": [],
+    "text_content": ""
+  }
+},
+{
+  "model": "core.pdffile",
+  "pk": 107,
+  "fields": {
+    "title": "pdf4",
+    "file": "pdfs/20250428665169243.pdf",
+    "uploaded_by": [
+      "SnehalAbhivant"
+    ],
+    "uploaded_at": "2025-09-08T10:06:54.273Z",
+    "folder": 29,
+    "keywords": [],
+    "text_content": ""
+  }
+},
+{
+  "model": "core.pdffile",
+  "pk": 109,
+  "fields": {
+    "title": "pdf5",
+    "file": "pdfs/20250428147252288_MfbpNmv.pdf",
+    "uploaded_by": [
+      "SnehalAbhivant"
+    ],
+    "uploaded_at": "2025-09-08T10:08:32.961Z",
+    "folder": 29,
+    "keywords": [],
+    "text_content": ""
+  }
+},
+{
+  "model": "core.pdffile",
+  "pk": 110,
+  "fields": {
+    "title": "pdf1",
+    "file": "pdfs/20250428627192664.pdf",
+    "uploaded_by": [
+      "SnehalAbhivant"
+    ],
+    "uploaded_at": "2025-09-08T10:13:48.438Z",
+    "folder": 30,
+    "keywords": [],
+    "text_content": ""
+  }
+},
+{
+  "model": "core.pdffile",
+  "pk": 111,
+  "fields": {
+    "title": "pdf2",
+    "file": "pdfs/20250428659423588.pdf",
+    "uploaded_by": [
+      "SnehalAbhivant"
+    ],
+    "uploaded_at": "2025-09-08T10:14:11.235Z",
+    "folder": 30,
+    "keywords": [],
+    "text_content": ""
+  }
+},
+{
+  "model": "core.pdffile",
+  "pk": 112,
+  "fields": {
+    "title": "pdf3",
+    "file": "pdfs/202504281927858474.pdf",
+    "uploaded_by": [
+      "SnehalAbhivant"
+    ],
+    "uploaded_at": "2025-09-08T10:15:04.946Z",
+    "folder": 30,
+    "keywords": [],
+    "text_content": ""
+  }
+},
+{
+  "model": "core.pdffile",
+  "pk": 113,
+  "fields": {
+    "title": "pdf4",
+    "file": "pdfs/20250428807359795.pdf",
+    "uploaded_by": [
+      "SnehalAbhivant"
+    ],
+    "uploaded_at": "2025-09-08T10:15:18.326Z",
+    "folder": 30,
+    "keywords": [],
+    "text_content": ""
+  }
+},
+{
+  "model": "core.pdffile",
+  "pk": 114,
+  "fields": {
+    "title": "pdf1",
+    "file": "pdfs/20250209114516088.pdf",
+    "uploaded_by": [
+      "SnehalAbhivant"
+    ],
+    "uploaded_at": "2025-09-08T10:21:28.690Z",
+    "folder": 34,
+    "keywords": [],
+    "text_content": ""
+  }
+},
+{
+  "model": "core.pdffile",
+  "pk": 115,
+  "fields": {
+    "title": "pdf2",
+    "file": "pdfs/202502091267927688.pdf",
+    "uploaded_by": [
+      "SnehalAbhivant"
+    ],
+    "uploaded_at": "2025-09-08T10:21:41.626Z",
+    "folder": 34,
+    "keywords": [],
+    "text_content": ""
+  }
+},
+{
+  "model": "core.pdffile",
+  "pk": 116,
+  "fields": {
+    "title": "pdf3",
+    "file": "pdfs/202502091364502596.pdf",
+    "uploaded_by": [
+      "SnehalAbhivant"
+    ],
+    "uploaded_at": "2025-09-08T10:21:54.985Z",
+    "folder": 34,
+    "keywords": [],
+    "text_content": ""
+  }
+},
+{
+  "model": "core.pdffile",
+  "pk": 117,
+  "fields": {
+    "title": "pdf4",
+    "file": "pdfs/202502091643619221.pdf",
+    "uploaded_by": [
+      "SnehalAbhivant"
+    ],
+    "uploaded_at": "2025-09-08T10:22:08.292Z",
+    "folder": 34,
+    "keywords": [],
+    "text_content": ""
+  }
+},
+{
+  "model": "core.pdffile",
+  "pk": 118,
+  "fields": {
+    "title": "pdf5",
+    "file": "pdfs/202502091787197672.pdf",
+    "uploaded_by": [
+      "SnehalAbhivant"
+    ],
+    "uploaded_at": "2025-09-08T10:22:26.079Z",
+    "folder": 34,
+    "keywords": [],
+    "text_content": ""
+  }
+},
+{
+  "model": "core.pdffile",
+  "pk": 119,
+  "fields": {
+    "title": "pdf6",
+    "file": "pdfs/202502092097715352.pdf",
+    "uploaded_by": [
+      "SnehalAbhivant"
+    ],
+    "uploaded_at": "2025-09-08T10:22:41.169Z",
+    "folder": 34,
+    "keywords": [],
+    "text_content": ""
+  }
+},
+{
+  "model": "core.pdffile",
+  "pk": 120,
+  "fields": {
+    "title": "pdf7",
+    "file": "pdfs/20250209244461432.pdf",
+    "uploaded_by": [
+      "SnehalAbhivant"
+    ],
+    "uploaded_at": "2025-09-08T10:23:22.495Z",
+    "folder": 34,
+    "keywords": [],
+    "text_content": ""
+  }
+},
+{
+  "model": "core.pdffile",
+  "pk": 121,
+  "fields": {
+    "title": "pdf8",
+    "file": "pdfs/20250209604982147.pdf",
+    "uploaded_by": [
+      "SnehalAbhivant"
+    ],
+    "uploaded_at": "2025-09-08T10:23:38.283Z",
+    "folder": 34,
+    "keywords": [],
+    "text_content": ""
+  }
+},
+{
+  "model": "core.pdffile",
+  "pk": 122,
+  "fields": {
+    "title": "pdf9",
+    "file": "pdfs/20250209635428299.pdf",
+    "uploaded_by": [
+      "SnehalAbhivant"
+    ],
+    "uploaded_at": "2025-09-08T10:24:02.442Z",
+    "folder": 34,
+    "keywords": [],
+    "text_content": ""
+  }
+},
+{
+  "model": "core.pdffile",
+  "pk": 123,
+  "fields": {
+    "title": "pdf10",
+    "file": "pdfs/20250209105036027.pdf",
+    "uploaded_by": [
+      "SnehalAbhivant"
+    ],
+    "uploaded_at": "2025-09-08T10:24:25.317Z",
+    "folder": 34,
+    "keywords": [],
+    "text_content": ""
+  }
+},
+{
+  "model": "core.pdffile",
+  "pk": 124,
+  "fields": {
+    "title": "pdf1",
+    "file": "pdfs/202502131605778914.pdf",
+    "uploaded_by": [
+      "SnehalAbhivant"
+    ],
+    "uploaded_at": "2025-09-08T10:25:47.894Z",
+    "folder": 35,
+    "keywords": [],
+    "text_content": ""
+  }
+},
+{
+  "model": "core.pdffile",
+  "pk": 125,
+  "fields": {
+    "title": "pdf2",
+    "file": "pdfs/202502131817458836.pdf",
+    "uploaded_by": [
+      "SnehalAbhivant"
+    ],
+    "uploaded_at": "2025-09-08T10:25:59.705Z",
+    "folder": 35,
+    "keywords": [],
+    "text_content": ""
+  }
+},
+{
+  "model": "core.pdffile",
+  "pk": 126,
+  "fields": {
+    "title": "pdf3",
+    "file": "pdfs/20250213306890673.pdf",
+    "uploaded_by": [
+      "SnehalAbhivant"
+    ],
+    "uploaded_at": "2025-09-08T10:26:13.033Z",
+    "folder": 35,
+    "keywords": [],
+    "text_content": ""
+  }
+},
+{
+  "model": "core.pdffile",
+  "pk": 127,
+  "fields": {
+    "title": "pdf4",
+    "file": "pdfs/20250213649656600.pdf",
+    "uploaded_by": [
+      "SnehalAbhivant"
+    ],
+    "uploaded_at": "2025-09-08T10:26:27.435Z",
+    "folder": 35,
+    "keywords": [],
+    "text_content": ""
+  }
+},
+{
+  "model": "core.pdffile",
+  "pk": 128,
+  "fields": {
+    "title": "pdf5",
+    "file": "pdfs/20250213934315491.pdf",
+    "uploaded_by": [
+      "SnehalAbhivant"
+    ],
+    "uploaded_at": "2025-09-08T10:26:43.712Z",
+    "folder": 35,
+    "keywords": [],
+    "text_content": ""
+  }
+},
+{
+  "model": "core.pdffile",
+  "pk": 135,
+  "fields": {
+    "title": "Direct Credit scheme",
+    "file": "pdfs/202504261002142466.pdf",
+    "uploaded_by": [
+      "SnehalAbhivant"
+    ],
+    "uploaded_at": "2025-09-08T10:34:18.884Z",
+    "folder": 37,
+    "keywords": [],
+    "text_content": ""
+  }
+},
+{
+  "model": "core.pdffile",
+  "pk": 136,
+  "fields": {
+    "title": "Computerization scheme",
+    "file": "pdfs/2025042495599424.pdf",
+    "uploaded_by": [
+      "SnehalAbhivant"
+    ],
+    "uploaded_at": "2025-09-08T10:34:45.837Z",
+    "folder": 37,
+    "keywords": [],
+    "text_content": ""
+  }
+},
+{
+  "model": "core.pdffile",
+  "pk": 137,
+  "fields": {
+    "title": "Loan Waiver scheme",
+    "file": "pdfs/2025042452587289.pdf",
+    "uploaded_by": [
+      "SnehalAbhivant"
+    ],
+    "uploaded_at": "2025-09-08T10:35:15.037Z",
+    "folder": 37,
+    "keywords": [],
+    "text_content": ""
+  }
+},
+{
+  "model": "core.pdffile",
+  "pk": 138,
+  "fields": {
+    "title": "PACS straightening scheme",
+    "file": "pdfs/20250424508513168.pdf",
+    "uploaded_by": [
+      "SnehalAbhivant"
+    ],
+    "uploaded_at": "2025-09-08T10:35:48.592Z",
+    "folder": 37,
+    "keywords": [],
+    "text_content": ""
+  }
+},
+{
+  "model": "core.pdffile",
+  "pk": 139,
+  "fields": {
+    "title": "Interest Subvention scheme",
+    "file": "pdfs/202504241596300670.pdf",
+    "uploaded_by": [
+      "SnehalAbhivant"
+    ],
+    "uploaded_at": "2025-09-08T10:36:34.851Z",
+    "folder": 37,
+    "keywords": [],
+    "text_content": ""
+  }
+}
+]
