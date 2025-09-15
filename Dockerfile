@@ -33,7 +33,7 @@ RUN apt-get update \
         pkg-config \
         curl \
         default-libmysqlclient-dev \
-        build-essential \ 
+        build-essential \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy requirements first for better caching
@@ -42,7 +42,6 @@ COPY requirements.txt .
 # Install Python dependencies
 RUN pip install --no-cache-dir --upgrade pip --root-user-action=ignore \
     && pip install --no-cache-dir -r requirements.txt --root-user-action=ignore
-
 
 # Copy project
 COPY . .
@@ -53,8 +52,14 @@ COPY .env* ./
 # Create directories for static and media files
 RUN mkdir -p /app/staticfiles /app/media
 
-# Collect static files
-RUN cd flowdocs && STATIC_ROOT=/app/staticfiles python manage.py collectstatic --noinput --clear
+# --- Collect static files ---
+# Switch into the folder where manage.py is
+WORKDIR /app/flowdocs
+# collectstatic uses STATIC_ROOT from settings.py
+RUN python manage.py collectstatic --noinput --clear
+
+# Switch back to app root
+WORKDIR /app
 
 # Create non-root user for security
 RUN adduser --disabled-password --gecos '' appuser \
