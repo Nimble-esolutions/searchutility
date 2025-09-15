@@ -17,11 +17,7 @@ from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 
-<<<<<<< HEAD
 BASE_DIR = Path(__file__).resolve().parent.parent
-=======
-BASE_DIR = Path(__file__).resolve().parent
->>>>>>> e72d0398de10fdc822853defe165fa8b525fc1fc
 load_dotenv(os.path.join(BASE_DIR, '.env'))
 #--------------for gemini Model---------------------
 # GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
@@ -29,20 +25,12 @@ load_dotenv(os.path.join(BASE_DIR, '.env'))
 
 
 #---------------------For OpenApi-----------------------------------------------------
-<<<<<<< HEAD
-<<<<<<< HEAD
 import environ
 
 env = environ.Env()
 environ.Env.read_env()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 #OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
-=======
-OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
->>>>>>> e72d0398de10fdc822853defe165fa8b525fc1fc
-=======
-OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
->>>>>>> e72d0398de10fdc822853defe165fa8b525fc1fc
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
@@ -82,24 +70,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-<<<<<<< HEAD
 ROOT_URLCONF = 'flowdocs.urls'
-=======
-ROOT_URLCONF = 'urls'
->>>>>>> e72d0398de10fdc822853defe165fa8b525fc1fc
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-<<<<<<< HEAD
-<<<<<<< HEAD
-        'DIRS': [BASE_DIR / "core" / "templates" / "csrf_failure"],
-=======
         'DIRS': [],
->>>>>>> e72d0398de10fdc822853defe165fa8b525fc1fc
-=======
-        'DIRS': [],
->>>>>>> e72d0398de10fdc822853defe165fa8b525fc1fc
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -111,39 +87,11 @@ TEMPLATES = [
     },
 ]
 
-<<<<<<< HEAD
 WSGI_APPLICATION = 'flowdocs.wsgi.application'
-=======
-WSGI_APPLICATION = 'wsgi.application'
->>>>>>> e72d0398de10fdc822853defe165fa8b525fc1fc
 
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
-<<<<<<< HEAD
-<<<<<<< HEAD
-#DATABASES = {
- #   'default': {
-  #      'ENGINE': 'django.db.backends.sqlite3',
-   #     'NAME': BASE_DIR / 'db.sqlite3',
-    #}
-    #}
-DATABASES = {
-    'default': {
-    'ENGINE': 'django.db.backends.mysql',
-    'NAME': 'sahkar_qa',
-    'USER': 'root',       # default XAMPP MySQL user
-    'PASSWORD': '',       # empty password
-    'HOST': '127.0.0.1',
-    'PORT': '3306',
-    'OPTIONS': {
-    'charset': 'utf8mb4',
-        },
-    }
-    }
-=======
-=======
->>>>>>> e72d0398de10fdc822853defe165fa8b525fc1fc
 
 DATABASES = {
     'default': {
@@ -151,10 +99,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-<<<<<<< HEAD
->>>>>>> e72d0398de10fdc822853defe165fa8b525fc1fc
-=======
->>>>>>> e72d0398de10fdc822853defe165fa8b525fc1fc
 
 
 # Password validation
@@ -193,6 +137,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+#import os
+#from pathlib import Path
+
+#BASE_DIR = Path(__file__).resolve().parent.parent
+
+#STATIC_URL = "/static/"
+#STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+
+
 
 # Additional static files directories
 STATICFILES_DIRS = [
@@ -204,8 +157,8 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 AUTH_USER_MODEL = 'core.CustomUser'
 # OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
@@ -244,29 +197,10 @@ CSRF_COOKIE_SECURE = False  # Set to True in production with HTTPS
 CSRF_COOKIE_HTTPONLY = False
 CSRF_COOKIE_SAMESITE = 'Lax'
 CSRF_USE_SESSIONS = False
-<<<<<<< HEAD
-<<<<<<< HEAD
-CSRF_FAILURE_VIEW = "core.views.custom_csrf_failure"
-
-=======
->>>>>>> e72d0398de10fdc822853defe165fa8b525fc1fc
-=======
->>>>>>> e72d0398de10fdc822853defe165fa8b525fc1fc
 
 # File upload settings
 FILE_UPLOAD_MAX_MEMORY_SIZE = 10 * 1024 * 1024  # 10MB
 DATA_UPLOAD_MAX_MEMORY_SIZE = 10 * 1024 * 1024  # 10MB
 
 # WhiteNoise configuration for static files
-<<<<<<< HEAD
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-<<<<<<< HEAD
-
-if DEBUG:
-    from django.middleware.csrf import CsrfViewMiddleware
-    CsrfViewMiddleware._get_debug_csrf_token_reason = lambda self, *a, **kw: None
-=======
->>>>>>> e72d0398de10fdc822853defe165fa8b525fc1fc
-=======
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
->>>>>>> e72d0398de10fdc822853defe165fa8b525fc1fc
