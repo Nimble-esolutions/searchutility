@@ -54,7 +54,10 @@ RUN mkdir -p /app/staticfiles /app/media
 #RUN cd flowdocs && STATIC_ROOT=/app/staticfiles python manage.py collectstatic --noinput --clear
 # Collect static files
 #RUN STATIC_ROOT=/app/staticfiles python manage.py collectstatic --noinput --clear //// for docker build
+ENV DJANGO_SETTINGS_MODULE=flowdocs.settings.production
+ENV DEBUG=False
 
+RUN python flowdocs/manage.py collectstatic --noinput --clear
 # Create non-root user for security
 RUN adduser --disabled-password --gecos '' appuser \
     && chown -R appuser:appuser /app
