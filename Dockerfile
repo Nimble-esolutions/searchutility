@@ -51,7 +51,9 @@ COPY .env* ./
 RUN mkdir -p /app/staticfiles /app/media
 
 # Collect static files
-RUN cd flowdocs && STATIC_ROOT=/app/staticfiles python manage.py collectstatic --noinput --clear
+#RUN cd flowdocs && STATIC_ROOT=/app/staticfiles python manage.py collectstatic --noinput --clear
+# Collect static files
+RUN STATIC_ROOT=/app/staticfiles python manage.py collectstatic --noinput --clear
 
 # Create non-root user for security
 RUN adduser --disabled-password --gecos '' appuser \
