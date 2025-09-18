@@ -1,6 +1,9 @@
 web:
   image: prod-frontend-aywco9:latest
-  command: gunicorn --bind 0.0.0.0:8000 --workers 3 flowdocs.wsgi:application
+  command: >
+    sh -c "python flowdocs/manage.py migrate &&
+           python flowdocs/manage.py collectstatic --noinput &&
+           gunicorn --bind 0.0.0.0:8000 --workers 3 flowdocs.wsgi:application"
   ports:
     - "8000:8000"
   environment:
