@@ -44,20 +44,13 @@ RUN pip install --no-cache-dir --upgrade pip \
 # Copy project
 COPY . .
 
-# Copy .env file if it exists
-COPY .env* ./
-
 # Create directories for static and media files
 RUN mkdir -p /app/staticfiles /app/media
 
 # Collect static files
-#RUN cd flowdocs && STATIC_ROOT=/app/staticfiles python manage.py collectstatic --noinput --clear
-# Collect static files
-#RUN STATIC_ROOT=/app/staticfiles python manage.py collectstatic --noinput --clear //// for docker build
-ENV DJANGO_SETTINGS_MODULE=flowdocs.settings.production
-ENV DEBUG=False
+#RUN python flowdocs/manage.py collectstatic --noinput --clear
+RUN cd flowdocs && STATIC_ROOT=/app/staticfiles python manage.py collectstatic --noinput --clear
 
-RUN python flowdocs/manage.py collectstatic --noinput --clear
 # Create non-root user for security
 RUN adduser --disabled-password --gecos '' appuser \
     && chown -R appuser:appuser /app
