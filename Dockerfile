@@ -50,7 +50,7 @@ RUN mkdir -p /app/staticfiles /app/media
 # Collect static files
 RUN python flowdocs/manage.py collectstatic --noinput --clear
 #RUN cd flowdocs && STATIC_ROOT=/app/staticfiles python manage.py collectstatic --noinput --clear
-python manage.py collectstatic --noinput --clear
+#python manage.py collectstatic --noinput --clear
 # Create non-root user for security
 RUN adduser --disabled-password --gecos '' appuser \
     && chown -R appuser:appuser /app
