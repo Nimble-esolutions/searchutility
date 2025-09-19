@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -e
 echo "Starting FlowDocs application..."
 
 # Environment defaults
